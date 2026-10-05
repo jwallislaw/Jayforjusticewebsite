@@ -24,3 +24,7 @@ Use Node 22. Run `npm ci`, then `npm run dev`. Validate with `npm run build` and
 Complete biography and content approval, confirm address and service geography, inventory WordPress URLs, prepare redirects, finish search-friendly page rendering and sitemap, and review browser layouts/accessibility. Verify professional requirements against authoritative sources before publishing substantive legal content. Implement and verify approved intake/client workflows separately with fictional data. Browser phone/text handoff still needs device testing.
 
 See docs/chat-10-handoff.md for project continuity.
+
+## Photography and visual breaks
+
+Homepage uses temporary Memphis skyline imagery, a navy statement band, an About photo block with a decorative gold-panel reveal, blue practice cards with white stars, and a 140 Adams courthouse callout. Reduced-motion preferences disable the reveal. Photo sources, licenses, and credits are in docs/photo-sources.md. No testimonials or reference-firm services are copied.

@@ -7,6 +7,23 @@ const services = [
   ['Traffic tickets', 'Small citation. Real consequences.', 'A ticket can raise questions about your license, your driving record, and what to do before your court date.'],
 ]
 const Arrow = () => <span aria-hidden="true">↗</span>
+function Reveal({ children, className }) {
+  const elementRef = useRef(null)
+  useEffect(() => {
+    const element = elementRef.current
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return
+    element.classList.add('reveal-ready')
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        element.classList.add('is-visible')
+        observer.disconnect()
+      }
+    }, { threshold: 0.15 })
+    observer.observe(element)
+    return () => observer.disconnect()
+  }, [])
+  return <div ref={elementRef} className={className}>{children}</div>
+}
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const headerRef = useRef(null)
@@ -45,7 +62,7 @@ export default function App() {
       <div className="practice-band">CRIMINAL DEFENSE <span>•</span> BANKRUPTCY <span>•</span> FAMILY LAW <span>•</span> TRAFFIC TICKETS</div>
     </header>
     {isAbout ? <AboutJay /> : isResources ? <Resources /> : isClientLogin ? <ClientLogin /> : <Home />}
-    <footer className="site-footer"><div className="footer-top"><a className="wordmark" href="/"><img className="firm-logo" src="/jayforjusticelogo.png" alt="Jay For Justice — Fighting for What Matters" width="2172" height="724" /></a><p>Help During Dark Days.<br />Hope for Bright Tomorrows.</p><div className="footer-links"><a href="/who-is-jay-for-justice/">Who is Jay For Justice</a><a href="tel:+19018087777">Call 901-808-7777</a><a href="sms:+19018087777">Text 901-808-7777</a><a href="#main">Back to top ↑</a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Jay For Justice</span><span>Design preview · Online intake is being prepared</span></div></footer>
+    <footer className="site-footer"><div className="footer-top"><a className="wordmark" href="/"><img className="firm-logo" src="/jayforjusticelogo.png" alt="Jay For Justice — Fighting for What Matters" width="2172" height="724" /></a><p>Help During Dark Days.<br />Hope for Bright Tomorrows.</p><div className="footer-links"><a href="/who-is-jay-for-justice/">Who is Jay For Justice</a><a href="tel:+19018087777">Call 901-808-7777</a><a href="sms:+19018087777">Text 901-808-7777</a><a href="#main">Back to top ↑</a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Jay For Justice</span><span>Design preview · Online intake is being prepared</span></div><p className="photo-credits">Memphis skyline: <a href="https://commons.wikimedia.org/wiki/File:Downtown_Memphis.jpg">Mattbeat1981, Wikimedia Commons</a> · CC0. Temporary photography will be replaced as the design develops.</p></footer>
 
   </>
 }
@@ -54,7 +71,7 @@ function Home() {
   return (
     <main id="main">
       <section className="home-introduction" id="home" aria-labelledby="hero-title">
-        <div className="intro-photo"><img src="/jaywallisheadshot.JPG" alt="Attorney Jay Wallis" width="1638" height="2048" fetchPriority="high" /></div>
+        <div className="intro-photo"><div className="portrait-focus"><img src="/jaywallisheadshot.JPG" alt="Attorney Jay Wallis" width="1638" height="2048" fetchPriority="high" /><span className="portrait-caption">JAY WALLIS <span aria-hidden="true">★</span> MEMPHIS, TN</span></div></div>
         <div className="intro-writing">
           <h1 id="hero-title">Help During Dark Days.</h1>
           <p className="hope-line">HOPE FOR BRIGHT TOMORROWS</p>
@@ -62,9 +79,13 @@ function Home() {
           <a className="button" href="/who-is-jay-for-justice/">WHO IS JAY FOR JUSTICE <Arrow /></a>
         </div>
       </section>
-      <div className="principle-strip"><span>When the stakes are personal,</span><strong>the approach should be thoughtful.</strong><span className="strip-star" aria-hidden="true">✦</span></div>
-      <section className="practice-section section-shell" id="practice-areas" aria-labelledby="practice-title"><div className="section-intro"><p className="eyebrow">HOW WE CAN HELP</p><h2 id="practice-title">Different challenges.<br /><em>One place to start.</em></h2><p>Find the area that fits your situation. You don’t need to have every answer before taking the first step.</p></div><div className="service-list">{services.map(([title, subtitle, description], i) => <details className="service" id={`practice-${i + 1}`} key={title}><summary><span className="service-number">0{i + 1}</span><span className="service-title">{title}<small>{subtitle}</small></span><span className="service-plus" aria-hidden="true">+</span></summary><div className="service-content"><p>{description}</p><a href="#next-step">Understand the next step <Arrow /></a></div></details>)}</div></section>
-      <section className="approach-section section-shell" id="our-approach" aria-labelledby="approach-title"><div><p className="eyebrow">THE JAY FOR JUSTICE APPROACH</p><h2 id="approach-title">A steady hand.<br /><em>A prepared mind.</em></h2></div><div className="approach-copy"><p className="large-copy">Good decisions begin with a clear understanding of what’s at stake.</p><p>Our direction is simple: listen carefully, prepare thoughtfully, and explain the next step in plain language. The focus stays on the people behind the legal questions.</p><div className="approach-values"><div><span>01 / PROTECTION</span><p>Focus on what matters to you.</p></div><div><span>02 / PREPARATION</span><p>Make room for informed decisions.</p></div><div><span>03 / COMMUNICATION</span><p>Bring clarity to the process.</p></div></div></div></section>
+      <div className="principle-strip"><span aria-hidden="true">★</span><p>When the stakes are personal,<br /><strong>the approach should be thoughtful.</strong></p><span aria-hidden="true">★</span></div>
+      <section className="story-section section-shell" id="our-approach" aria-labelledby="story-title">
+        <div className="story-copy"><div className="story-heading"><p className="eyebrow">ABOUT JAY FOR JUSTICE</p><h2 id="story-title">A person.<br /><em>Not just a case.</em></h2></div><p>Behind a legal question is a person trying to protect what matters. Jay For Justice starts with the situation in front of you: your freedom, your family, and your future.</p><p>Get to know Jay Wallis and find a starting point for your next step.</p><a className="button" href="/who-is-jay-for-justice/">MEET JAY WALLIS <Arrow /></a></div>
+        <Reveal className="story-visual"><div className="story-accent" aria-hidden="true" /><img src="/memphis-skyline.jpg" alt="Downtown Memphis and the Mississippi River" width="1600" height="900" loading="lazy" /><span className="story-photo-label">MEMPHIS, TENNESSEE</span></Reveal>
+      </section>
+      <section className="practice-showcase" id="practice-areas" aria-labelledby="practice-title"><div className="practice-heading"><p className="eyebrow">FIND YOUR STARTING POINT</p><h2 id="practice-title">Practice Areas</h2></div><div className="practice-cards">{services.map(([title, subtitle, description], i) => <details className="practice-card" id={`practice-${i + 1}`} key={title}><summary><span className="practice-star" aria-hidden="true">★</span><span className="practice-card-title">{title}</span><span className="practice-card-subtitle">{subtitle}</span><span className="learn-more">LEARN MORE <span aria-hidden="true">+</span></span></summary><div className="practice-card-content"><p>{description}</p><a href="#next-step">Discuss your next step <Arrow /></a></div></details>)}</div></section>
+      <section className="courthouse-callout" aria-labelledby="advocacy-title"><div className="courthouse-content"><p className="eyebrow">JAY FOR JUSTICE</p><h2 id="advocacy-title">Fiercely Advocate<br /><span>for Your Best Future.</span></h2><div className="courthouse-actions"><a className="button" href="tel:+19018087777">CALL ABOUT YOUR SITUATION <Arrow /></a><a className="button button-outline" href="sms:+19018087777">TEXT JAY FOR JUSTICE <Arrow /></a></div></div><p className="courthouse-credit">Shelby County Courthouse · 140 Adams Avenue<br />Photo: <a href="https://commons.wikimedia.org/wiki/File:Shelby_County_Courthouse,_Adams_Avenue,_Memphis,_TN_(53699322755).jpg">Warren LeMay</a> · <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a> · resized and displayed with an overlay</p></section>
       <section className="next-section section-shell" id="next-step" aria-labelledby="next-title"><div><p className="eyebrow">YOUR NEXT STEP</p><h2 id="next-title">Start with<br /><em>your situation.</em></h2></div><div className="next-copy"><p className="large-copy">An inquiry is the beginning of a conversation.</p><ol><li><strong>Tell us what kind of help you need.</strong><span>A brief initial inquiry should be enough to get started. No account required.</span></li><li><strong>The firm reviews your inquiry.</strong><span>Review and conflict screening come before a decision about representation.</span></li><li><strong>Discuss the path forward.</strong><span>Consultation, engagement, and client onboarding are separate steps.</span></li></ol><div className="preview-notice"><strong>Call or text Jay For Justice</strong><a className="contact-phone" href="tel:+19018087777">901-808-7777</a><div className="inline-contact"><a href="tel:+19018087777">Call</a><a href="sms:+19018087777">Text</a></div><p>Call or text to discuss the next step. Online inquiry forms are still being prepared.</p></div><p className="legal-note">Submitting an inquiry does not establish an attorney-client relationship. Avoid sharing confidential details until the firm provides instructions.</p></div></section>
     </main>
   )
