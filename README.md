@@ -1,32 +1,26 @@
 # Jay For Justice website
 
-First homepage design draft for the replacement of JayForJustice.com. React + Vite, prepared for Netlify. This is not a production launch or a functioning intake service.
+Website replacement draft in jwallislaw/Jayforjusticewebsite, on codex/chat-10-homepage. React + Vite, prepared for Netlify. The WordPress site remains separate; domain changes require explicit launch authorization.
+
+## Current design
+
+Follow Jay’s supplied reference palette: pale blue #e8f2fa, location blue #0a478d, call/text blue #507ebc, gold #83652b, deep navy #1b1944. This replaces the earlier red palette. The stationary header contains the uploaded firm logo, Home/About/Practice Areas/Resources/Contact, Memphis, TN, call/text 901-808-7777, and CLIENT MYCASE LOGIN. The homepage displays a smaller circular headshot on the left, with “Help During Dark Days.” and “HOPE FOR BRIGHT TOMORROWS” on the right. Jay plans replacement photography later.
+
+## Pages and contact
+
+- `/`: homepage and practice-area/approach/contact sections.
+- `/who-is-jay-for-justice/`: About, using confirmed identity. Detailed biography awaits Jay.
+- `/resources/`: links to existing practice-area and inquiry-process information.
+- `/client-login/`: holding page. MyCase integration and authentication are not built.
+- Call uses `tel:+19018087777`; Text uses `sms:+19018087777`.
+- Original uploaded assets remain in public/. No online intake or private storage is active.
 
 ## Development
 
-Use Node 22. Run `npm ci`, then `npm run dev`. Validate with `npm run build` and `npm run lint`. Netlify builds with `npm run build` and serves `dist`.
-
-## Preview status
-
-- Proposed red, white, navy, gold, serif typography, with Jay’s uploaded logo and attorney headshot.
-- Homepage sections: firm identity, four practice areas, approach, and inquiry process.
-- Native expandable practice summaries, anchor navigation, and React mobile menu.
-- Confirmed public phone 901-808-7777 appears as click-to-call links. No online inquiries are collected or stored.
-- Draft robots metadata, robots.txt, and Netlify headers block search indexing. Keep these until launch approval.
-- No changes to the current WordPress website, domains, or other repositories.
+Use Node 22. Run `npm ci`, then `npm run dev`. Validate with `npm run build` and `npm run lint`. Netlify builds with `npm run build` and serves `dist`. All pages have separate HTML build entries. Draft robots metadata, robots.txt, and headers block indexing until approved launch.
 
 ## Before launch
 
-Confirm logo, slogan, contact information, attorney biography, practice scope, geographic coverage, and published firm commitments. Inventory WordPress URLs and content, prepare redirects, choose a search-friendly rendering approach, and finish metadata and sitemap. Verify current professional requirements against authoritative sources before publishing substantive legal content. Implement and verify the approved intake workflow separately, using fictional data. Review mobile, keyboard accessibility, navigation, and contrast in a browser. Production publication and domain changes require explicit launch authorization.
+Complete biography and content approval, confirm address and service geography, inventory WordPress URLs, prepare redirects, finish search-friendly page rendering and sitemap, and review browser layouts/accessibility. Verify professional requirements against authoritative sources before publishing substantive legal content. Implement and verify approved intake/client workflows separately with fictional data. Browser phone/text handoff still needs device testing.
 
-See `docs/chat-10-handoff.md` for current progress and next steps.
-
-Jay confirmed the palette must be red, white, navy, and gold. Ivory is removed. Logo, typography, artwork, and page wording remain proposals.
-
-## Homepage review changes
-
-Header logo and contact options are larger. Separate Call and Text actions use tel:+19018087777 and sms:+19018087777. A fixed contact bar is available on both pages; portraits are circular through CSS. `/who-is-jay-for-justice/` has a separate HTML build entry and page metadata. Detailed attorney biography still needs Jay’s wording.
-
-## Current visual direction
-
-The latest homepage follows Jay’s header and split-section references: a sticky logo/navigation row and colored contact/practice bands, with the photograph on the left and the “Help During Dark Days.” / “HOPE FOR BRIGHT TOMORROWS” copy on the right. Persistent call/text access now comes from the sticky header. The earlier bottom contact bar and homepage circular portrait are superseded.
+See docs/chat-10-handoff.md for project continuity.

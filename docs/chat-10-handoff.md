@@ -1,5 +1,9 @@
 # Chat 10 handoff — October 5, 2026
 
+## Current decisions (supersede earlier proposals below)
+
+Repository: jwallislaw/Jayforjusticewebsite; branch: codex/chat-10-homepage. Palette follows Jay’s latest reference (pale blue, two blues, deep navy, muted gold). Header remains visible and uses Memphis, TN, Call/Text 901-808-7777, CLIENT MYCASE LOGIN, and Home/About/Practice Areas/Resources/Contact. Current homepage photo is smaller/circular on the left, pending replacement. Main wording remains Help During Dark Days. / HOPE FOR BRIGHT TOMORROWS. MyCase login is a holding page only. WordPress stays live.
+
 ## Completed
 
 Jay supplied jwallislaw/Jayforjusticewebsite as the intended repository. GitHub confirmed it was empty. Carried the earlier React + Vite homepage draft into this project. Created a first working homepage design with responsive styles, expandable practice-area summaries, mobile navigation, anchor links, a skip link, and reduced-motion support. Added firm title/description, a J favicon, Netlify build configuration, and preview indexing guards. No account, intake backend, or document storage added.
@@ -56,3 +60,11 @@ Jay requested starting over with the supplied header and split-section layout re
 Homepage now uses the supplied headshot in a large left-hand photo panel and copy on the right. Exact new headline: Help During Dark Days. Exact second line: HOPE FOR BRIGHT TOMORROWS. Red/white/navy/gold remain confirmed. Original images are preserved. The new reference replaces the prior homepage circular portrait treatment; the biography page retains its round portrait. Lower practice/approach/contact sections and the biography page remain available.
 
 Validation for the new direction: both page builds, lint, and whitespace checks passed. Component rendering checks verified the exact headline/subheading, left-before-right photo/copy order, one H1 per page, biography navigation, and call/text links within the shared header. Browser visual and scrolling review remain outstanding. Next step: review the refreshed preview with Jay.
+
+## Latest direction: reference palette and exact header labels
+
+Jay explicitly replaced the red/white/navy/gold palette with the reference screenshot colors. Sampled colors: pale blue #e8f2fa, location blue #0a478d, call/text blue #507ebc, login gold #83652b, deep navy #1b1944. Shared stationary header uses Memphis, TN; CALL | TEXT with 901-808-7777; CLIENT MYCASE LOGIN. Navigation labels: Home, About, Practice Areas, Resources, Contact. About still opens Who is Jay For Justice. Client login opens /client-login/, a holding page; MyCase integration/authentication is not built and no external login URL was invented. Resources opens /resources/ with working links to existing practice areas and next-step information. Both have separate static build entries.
+
+Current headshot is smaller and circular on the homepage, left of the copy. Jay intends to replace it later with photography similar to the reference. Original uploads remain intact. The header is inset on desktop to follow the reference and full-width on mobile; all three colored cells remain present. These are the current decisions and supersede prior palette/layout proposals.
+
+Validation: four HTML page entries build successfully; lint and whitespace checks pass. Component rendering checks verify all five navigation labels, Memphis, TN, CLIENT MYCASE LOGIN, correct destination pages, call/text actions, and one H1 per page. Browser visual/scrolling review and SMS app handoff remain unverified. Next step: review the refreshed preview and supply replacement photography/biography when ready.
