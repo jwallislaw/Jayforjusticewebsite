@@ -26,3 +26,7 @@ Jay confirmed the palette must be red, white, navy, and gold. Ivory is removed. 
 ## Homepage review changes
 
 Header logo and contact options are larger. Separate Call and Text actions use tel:+19018087777 and sms:+19018087777. A fixed contact bar is available on both pages; portraits are circular through CSS. `/who-is-jay-for-justice/` has a separate HTML build entry and page metadata. Detailed attorney biography still needs Jay’s wording.
+
+## Current visual direction
+
+The latest homepage follows Jay’s header and split-section references: a sticky logo/navigation row and colored contact/practice bands, with the photograph on the left and the “Help During Dark Days.” / “HOPE FOR BRIGHT TOMORROWS” copy on the right. Persistent call/text access now comes from the sticky header. The earlier bottom contact bar and homepage circular portrait are superseded.

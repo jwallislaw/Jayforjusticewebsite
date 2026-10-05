@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './App.css'
 const services = [
   ['Criminal defense', 'Your freedom. Your future.', 'A criminal charge can put everything in question. Start by understanding the charge, the process, and the decisions ahead.'],
@@ -9,31 +9,54 @@ const services = [
 const Arrow = () => <span aria-hidden="true">↗</span>
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const headerRef = useRef(null)
+  useEffect(() => {
+    const header = headerRef.current
+    const updateHeight = () => document.documentElement.style.setProperty('--header-height', `${header.getBoundingClientRect().height}px`)
+    updateHeight()
+    const observer = new ResizeObserver(updateHeight)
+    observer.observe(header)
+    return () => observer.disconnect()
+  }, [])
   const closeMenu = () => setMenuOpen(false)
   const isAbout = window.location.pathname.replace(/\/$/, '') === '/who-is-jay-for-justice'
   return <>
     <a className="skip-link" href="#main">Skip to content</a>
-    <div className="draft-banner">Website design preview <span>•</span> Website content is being reviewed.</div>
-    <header className="site-header">
-      <a className="wordmark" href="/" onClick={closeMenu} aria-label="Jay For Justice home"><img className="firm-logo" src="/jayforjusticelogo.png" alt="Jay For Justice — Fighting for What Matters" width="2172" height="724" /></a>
-      <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="primary-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? 'Close −' : 'Menu +'}</button>
-      <div className="header-contact"><span>Call or text Jay For Justice</span><a className="header-number" href="tel:+19018087777">901-808-7777</a><div className="contact-actions"><a href="tel:+19018087777">Call <span aria-hidden="true">↗</span></a><a href="sms:+19018087777">Text <span aria-hidden="true">↗</span></a></div></div>
-      <nav id="primary-navigation" className={menuOpen ? 'navigation is-open' : 'navigation'} aria-label="Main navigation">
-        <a href="/#practice-areas" onClick={closeMenu}>Practice areas</a><a href="/who-is-jay-for-justice/" aria-current={isAbout ? 'page' : undefined} onClick={closeMenu}>Who is Jay For Justice</a><a href="/#our-approach" onClick={closeMenu}>Our approach</a>
-      </nav>
+    <header className="site-header" ref={headerRef}>
+      <div className="masthead">
+        <a className="wordmark" href="/" onClick={closeMenu} aria-label="Jay For Justice home"><img className="firm-logo" src="/jayforjusticelogo.png" alt="Jay For Justice — Fighting for What Matters" width="2172" height="724" /></a>
+        <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="primary-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? 'Close −' : 'Menu +'}</button>
+        <nav id="primary-navigation" className={menuOpen ? 'navigation is-open' : 'navigation'} aria-label="Main navigation">
+          <a href="/" aria-current={!isAbout ? 'page' : undefined} onClick={closeMenu}>Home</a>
+          <a href="/who-is-jay-for-justice/" aria-current={isAbout ? 'page' : undefined} onClick={closeMenu}>Who is Jay For Justice</a>
+          <a href="/#practice-areas" onClick={closeMenu}>Practice Areas</a>
+          <a href="/#next-step" onClick={closeMenu}>Contact</a>
+        </nav>
+      </div>
+      <div className="header-bands">
+        <div className="firm-band">JAY FOR JUSTICE</div>
+        <div className="contact-band" aria-label="Call or text Jay For Justice"><a href="tel:+19018087777">CALL</a><span aria-hidden="true">|</span><a href="sms:+19018087777">TEXT</a><span className="band-number">901-808-7777</span></div>
+        <a className="about-band" href="/who-is-jay-for-justice/" onClick={closeMenu}>WHO IS JAY FOR JUSTICE</a>
+      </div>
+      <div className="practice-band">CRIMINAL DEFENSE <span>•</span> BANKRUPTCY <span>•</span> FAMILY LAW <span>•</span> TRAFFIC TICKETS</div>
     </header>
     {isAbout ? <AboutJay /> : <Home />}
-    <footer className="site-footer"><div className="footer-top"><a className="wordmark" href="/"><img className="firm-logo" src="/jayforjusticelogo.png" alt="Jay For Justice — Fighting for What Matters" width="2172" height="724" /></a><p>Fighting for what matters.</p><div className="footer-links"><a href="/who-is-jay-for-justice/">Who is Jay For Justice</a><a href="tel:+19018087777">Call 901-808-7777</a><a href="sms:+19018087777">Text 901-808-7777</a><a href="#main">Back to top ↑</a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Jay For Justice</span><span>Design preview · Online intake is being prepared</span></div></footer>
-    <aside className="persistent-contact" aria-label="Call or text Jay For Justice"><span>901-808-7777</span><a href="tel:+19018087777" aria-label="Call Jay For Justice at 901-808-7777">Call</a><a href="sms:+19018087777" aria-label="Text Jay For Justice at 901-808-7777">Text</a></aside>
+    <footer className="site-footer"><div className="footer-top"><a className="wordmark" href="/"><img className="firm-logo" src="/jayforjusticelogo.png" alt="Jay For Justice — Fighting for What Matters" width="2172" height="724" /></a><p>Help During Dark Days.<br />Hope for Bright Tomorrows.</p><div className="footer-links"><a href="/who-is-jay-for-justice/">Who is Jay For Justice</a><a href="tel:+19018087777">Call 901-808-7777</a><a href="sms:+19018087777">Text 901-808-7777</a><a href="#main">Back to top ↑</a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Jay For Justice</span><span>Design preview · Online intake is being prepared</span></div></footer>
+
   </>
 }
 
 function Home() {
   return (
     <main id="main">
-      <section className="hero section-shell" id="home" aria-labelledby="hero-title">
-        <div className="hero-copy"><p className="eyebrow">— &nbsp; JAY FOR JUSTICE</p><h1 id="hero-title">Fighting for<br />what <em>matters.</em></h1><p className="hero-description">Your freedom. Your family. Your future.<br />When life gets complicated, a clear next step matters.</p><div className="hero-actions"><a className="button" href="tel:+19018087777">Call 901-808-7777 <Arrow /></a><a className="button button-outline" href="sms:+19018087777">Text Jay For Justice <Arrow /></a><a className="hero-secondary" href="#practice-areas">Explore practice areas ↓</a></div><p className="hero-footnote">Protection. Preparation. Perspective.</p></div>
-        <figure className="attorney-portrait"><img src="/jaywallisheadshot.JPG" alt="Attorney Jay Wallis" width="1638" height="2048" fetchPriority="high" /><figcaption><span>Jay Wallis</span><small>JAY FOR JUSTICE</small></figcaption></figure>
+      <section className="home-introduction" id="home" aria-labelledby="hero-title">
+        <div className="intro-photo"><img src="/jaywallisheadshot.JPG" alt="Attorney Jay Wallis" width="1638" height="2048" fetchPriority="high" /></div>
+        <div className="intro-writing">
+          <h1 id="hero-title">Help During Dark Days.</h1>
+          <p className="hope-line">HOPE FOR BRIGHT TOMORROWS</p>
+          <div className="intro-body"><p>Legal questions can affect your freedom, your family, and your financial future. Understanding your options is a place to begin.</p><p>Jay For Justice brings criminal defense, bankruptcy, family law, and traffic-ticket information together in one place. Explore the area that fits your situation, or call or text the firm to discuss the next step.</p><p>Meet <a href="/who-is-jay-for-justice/">Jay Wallis</a>, explore our <a href="#practice-areas">practice areas</a>, and find a starting point for what comes next.</p></div>
+          <a className="button" href="/who-is-jay-for-justice/">WHO IS JAY FOR JUSTICE <Arrow /></a>
+        </div>
       </section>
       <div className="principle-strip"><span>When the stakes are personal,</span><strong>the approach should be thoughtful.</strong><span className="strip-star" aria-hidden="true">✦</span></div>
       <section className="practice-section section-shell" id="practice-areas" aria-labelledby="practice-title"><div className="section-intro"><p className="eyebrow">HOW WE CAN HELP</p><h2 id="practice-title">Different challenges.<br /><em>One place to start.</em></h2><p>Find the area that fits your situation. You don’t need to have every answer before taking the first step.</p></div><div className="service-list">{services.map(([title, subtitle, description], i) => <details className="service" key={title}><summary><span className="service-number">0{i + 1}</span><span className="service-title">{title}<small>{subtitle}</small></span><span className="service-plus" aria-hidden="true">+</span></summary><div className="service-content"><p>{description}</p><a href="#next-step">Understand the next step <Arrow /></a></div></details>)}</div></section>
