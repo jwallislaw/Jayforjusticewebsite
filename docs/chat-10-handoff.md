@@ -1,3 +1,9 @@
+## Link previews configured — October 5, 2026
+
+All nine HTML pages now include Open Graph and social-card metadata with Jay's uploaded headshot. The homepage share title is “Help During Dark Days. Hope for Bright Tomorrows.” Other pages keep their page names and use the slogan in the share description. Image and page URLs currently use https://jayforjusticewebsite.netlify.app; replace this host during the authorized domain launch. Named social preview crawlers are permitted in robots.txt; general indexing remains blocked by robots.txt, HTML noindex, and Netlify X-Robots-Tag.
+
+Validation: production build and metadata checks; Netlify homepage returned HTTP 200 before deployment. Actual previews in messaging apps remain unverified and may use cached content. No live WordPress domain changes. Next: send the Netlify homepage link to review the preview on Jay's preferred messaging app.
+
 ## Practice pages added — October 5, 2026
 
 Each of the five homepage practice cards now links to a separate page: Criminal Defense, Bankruptcy, Divorce & Family Law, Traffic Tickets, and Employment Law. Resources and the practice pages link to these pages too. Each page has a unique heading, brief introductory copy, call/text links, and an inquiry notice. These are starting pages for later content development; no credentials, outcomes, or specific employment services were invented. Vite builds all nine page entry points. The logo readability changes and corrected Employment Law label are included.
