@@ -1,3 +1,7 @@
+## Header practice links — October 5, 2026
+
+All five practice labels in the stationary header strip now link to their corresponding practice pages, with current-page indication and keyboard focus styling. The share-preview metadata update was saved in commit 4dbbe4f9916c80f8e19fe07e1bccbb89c12b3b9c; Netlify was still rebuilding during its first check. Jay's photo returned HTTP 200. Verify the deployed metadata after the latest build.
+
 ## Link previews configured — October 5, 2026
 
 All nine HTML pages now include Open Graph and social-card metadata with Jay's uploaded headshot. The homepage share title is “Help During Dark Days. Hope for Bright Tomorrows.” Other pages keep their page names and use the slogan in the share description. Image and page URLs currently use https://jayforjusticewebsite.netlify.app; replace this host during the authorized domain launch. Named social preview crawlers are permitted in robots.txt; general indexing remains blocked by robots.txt, HTML noindex, and Netlify X-Robots-Tag.

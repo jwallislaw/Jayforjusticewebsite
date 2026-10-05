@@ -23,3 +23,5 @@
 
 .practice-card-link{color:inherit;text-decoration:none}.practice-card-link:hover .learn-more{background:white}.practice-card-link:focus-visible{outline:3px solid var(--gold);outline-offset:-4px}.practice-page h2{font-size:32px;margin:40px 0 20px}.practice-page .resource-links{margin-top:40px}
 @media(max-width:1000px){.practice-card:last-child{grid-column:1/-1}}
+
+.practice-band .practice-band-item{display:inline-flex;align-items:center;gap:12px;color:inherit}.practice-band a{display:inline-flex;align-items:center;min-height:32px;color:inherit;text-decoration:none}.practice-band a:hover,.practice-band a[aria-current="page"]{text-decoration:underline;text-underline-offset:4px}.practice-band a:focus-visible{outline:2px solid white;outline-offset:3px}.practice-band .practice-divider{color:inherit}@media(max-width:700px){.practice-band .practice-band-item{gap:8px}}
