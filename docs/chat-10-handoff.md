@@ -1,3 +1,9 @@
+## Practice pages added — October 5, 2026
+
+Each of the five homepage practice cards now links to a separate page: Criminal Defense, Bankruptcy, Divorce & Family Law, Traffic Tickets, and Employment Law. Resources and the practice pages link to these pages too. Each page has a unique heading, brief introductory copy, call/text links, and an inquiry notice. These are starting pages for later content development; no credentials, outcomes, or specific employment services were invented. Vite builds all nine page entry points. The logo readability changes and corrected Employment Law label are included.
+
+Validation: production build, lint, internal link targets and rendered page checks. Browser visual review and substantive page content remain pending. Repository: jwallislaw/Jayforjusticewebsite; branch: codex/chat-10-homepage; draft PR #1. Netlify temporary preview rebuilds from this branch; the live WordPress domain remains unchanged. Next: review the preview and develop each practice page with Jay's confirmed details.
+
 # Chat 10 handoff — October 5, 2026
 
 ## Current decisions (supersede earlier proposals below)
@@ -74,3 +80,9 @@ Validation: four HTML page entries build successfully; lint and whitespace check
 Added a Memphis skyline backdrop behind Jay’s framed circular portrait, an inverse navy/light statement band, an About section with temporary city photography and a gold panel that slides into view once, four blue practice-area cards with white stars and expandable information, and a lower courthouse photo callout reading Fiercely Advocate for Your Best Future. Existing confirmed practice areas are preserved; no reference-firm services or testimonials were copied. Motion is disabled for reduced-motion preferences, and decorative animation does not hide content. Actual courthouse image is used for 140 Adams Avenue; source/license credits are in the section and docs/photo-sources.md. Jay will provide replacement photography later.
 
 Validation: all four page builds, lint, whitespace checks, and rendered page/image/contact checks passed. Confirmed four practice cards/stars and resource anchors, visible photograph attribution, and both images in the deployment output. Browser visual review, scroll-trigger animation, and device call/text handoff remain unverified. Next step: review the updated preview and replace temporary skyline photography with Jay’s chosen photos.
+
+## Logo readability and Employment Law
+
+Jay reported that the embedded slogan looked blurred. Kept the uploaded artwork intact, masked its tiny raster slogan using CSS, and added a clear text slogan below the logo in both header/footer. Header logo display is larger on desktop. Jay confirmed the label Employment Law: added a fifth practice card, included it in the practice strip and Resources links, and updated introductory practice lists. No employment-law claims, credentials, or outcomes were added. Service detail copy remains brief for review.
+
+Validation: production build, lint, and whitespace checks passed. Slogan now uses actual text, and Employment Law is included in the header/practice/resources data. Browser logo-mask alignment and five-card layout still need visual review.
