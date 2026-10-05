@@ -16,11 +16,20 @@
 @media(prefers-reduced-motion:reduce){.story-accent{transition:none;transform:none!important;opacity:1!important}}
 
 /* Live text keeps the slogan readable at every display scale. */
-.logo-art{display:block;position:relative}.logo-art::after{content:'';position:absolute;left:27%;right:2%;top:61%;height:14%;background:var(--logo-background,var(--cream))}.brand-tagline{display:block;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:600;letter-spacing:1.7px;text-transform:uppercase;text-align:center;line-height:1.5;color:var(--navy);margin-top:-4px;padding-bottom:7px}.masthead .firm-logo{width:440px}.site-footer .wordmark{--logo-background:var(--navy)}.site-footer .brand-tagline{color:#fff;font-size:12px;letter-spacing:1px}.practice-card-title{font-size:16px;letter-spacing:1.3px}
-@media(max-width:1100px){.masthead .firm-logo{width:320px}.brand-tagline{font-size:13px;letter-spacing:1.2px}}
-@media(max-width:700px){.masthead .firm-logo{width:240px}.brand-tagline{font-size:11px;letter-spacing:.65px;margin-top:0;padding-bottom:5px}}
-@media(max-width:360px){.masthead .firm-logo{width:195px}.brand-tagline{font-size:10px;letter-spacing:.4px}}
-
+/* Keep the shield and letter descenders visible; cover only the original tiny slogan. */
+.wordmark{position:relative;text-decoration:none}
+.logo-art{display:block;position:relative}
+.logo-art::after{content:'';position:absolute;left:27%;right:2%;top:65%;height:13%;background:var(--logo-background,var(--cream))}
+.brand-tagline{position:absolute;top:66%;left:27%;right:2%;display:flex;align-items:center;justify-content:center;gap:8px;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;white-space:nowrap;line-height:1.5;color:var(--gold)}
+.brand-tagline>span:first-child,.brand-tagline>span:last-child{font-size:14px;line-height:1}
+.masthead .firm-logo{width:440px}
+.site-footer .wordmark{--logo-background:var(--navy)}
+.site-footer .brand-tagline{color:#dec594;font-size:9px;letter-spacing:.3px;gap:5px}
+.site-footer .brand-tagline>span:first-child,.site-footer .brand-tagline>span:last-child{font-size:10px}
+.practice-card-title{font-size:16px;letter-spacing:1.3px}
+@media(max-width:1100px){.masthead .firm-logo{width:320px}.masthead .brand-tagline{font-size:10px;letter-spacing:.3px;gap:5px}.masthead .brand-tagline>span:first-child,.masthead .brand-tagline>span:last-child{font-size:11px}}
+@media(max-width:700px){.masthead .firm-logo{width:240px}.masthead .brand-tagline{font-size:8px;letter-spacing:0;gap:3px}.masthead .brand-tagline>span:first-child,.masthead .brand-tagline>span:last-child{font-size:8px}}
+@media(max-width:360px){.masthead .firm-logo{width:195px}.masthead .brand-tagline{font-size:6.5px;gap:2px}.masthead .brand-tagline>span:first-child,.masthead .brand-tagline>span:last-child{font-size:7px}}
 .practice-card-link{color:inherit;text-decoration:none}.practice-card-link:hover .learn-more{background:white}.practice-card-link:focus-visible{outline:3px solid var(--gold);outline-offset:-4px}.practice-page h2{font-size:32px;margin:40px 0 20px}.practice-page .resource-links{margin-top:40px}
 @media(max-width:1000px){.practice-card:last-child{grid-column:1/-1}}
 

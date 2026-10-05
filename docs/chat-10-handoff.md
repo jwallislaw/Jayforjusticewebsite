@@ -1,3 +1,7 @@
+## Logo alignment correction — October 5, 2026
+
+Moved the CSS cover for the original raster slogan from 61% to 65% down the logo so the J descenders remain visible. Positioned the readable slogan directly below the name, inside the logo's text area, in gold with a decorative star on each side. Removed the linked slogan's underline. Responsive sizing covers header and footer logos without modifying the uploaded image. Build/lint passed; Jay should review the rendered alignment after Netlify deploys.
+
 ## Header practice links — October 5, 2026
 
 All five practice labels in the stationary header strip now link to their corresponding practice pages, with current-page indication and keyboard focus styling. The share-preview metadata update was saved in commit 4dbbe4f9916c80f8e19fe07e1bccbb89c12b3b9c; Netlify was still rebuilding during its first check. Jay's photo returned HTTP 200. Verify the deployed metadata after the latest build.

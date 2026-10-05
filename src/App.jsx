@@ -10,7 +10,7 @@ const services = [
 const servicePaths = ['criminal-defense', 'bankruptcy', 'divorce-family-law', 'traffic-tickets', 'employment-law']
 const Arrow = () => <span aria-hidden="true">↗</span>
 function BrandLogo() {
-  return <><span className="logo-art"><img className="firm-logo" src="/jayforjusticelogo.png" alt="Jay For Justice" width="2172" height="724" /></span><span className="brand-tagline">Fighting for What Matters</span></>
+  return <><span className="logo-art"><img className="firm-logo" src="/jayforjusticelogo.png" alt="Jay For Justice" width="2172" height="724" /></span><span className="brand-tagline"><span aria-hidden="true">★</span><span>Fighting For What Matters</span><span aria-hidden="true">★</span></span></>
 }
 function Reveal({ children, className }) {
   const elementRef = useRef(null)
