@@ -8,10 +8,10 @@ Use Node 22. Run `npm ci`, then `npm run dev`. Validate with `npm run build` and
 
 ## Preview status
 
-- Proposed red, white, navy, gold, serif typography, and abstract J artwork.
+- Proposed red, white, navy, gold, serif typography, with Jay’s uploaded logo and attorney headshot.
 - Homepage sections: firm identity, four practice areas, approach, and inquiry process.
 - Native expandable practice summaries, anchor navigation, and React mobile menu.
-- Contact options link to the current domain. No inquiries are collected or stored.
+- Confirmed public phone 901-808-7777 appears as click-to-call links. No online inquiries are collected or stored.
 - Draft robots metadata, robots.txt, and Netlify headers block search indexing. Keep these until launch approval.
 - No changes to the current WordPress website, domains, or other repositories.
 

@@ -36,3 +36,9 @@ Jay confirmed the palette must be red, white, navy, and gold. Ivory is removed. 
 ## Repository correction
 
 Jay identified Jayforjusticewebsite as the intended project. The earlier draft PR in Jay-For-Justice is superseded. Future work belongs in Jayforjusticewebsite. This repository is public; commit only website source and configuration.
+
+## Brand assets and contact update
+
+Jay uploaded public/jayforjusticelogo.png, public/jayforjusticeshield.jpg, and public/jaywallisheadshot.JPG to codex/chat-10-homepage. The originals remain intact. Logo is now used in the header/footer, and the headshot replaces the decorative J in the hero with a Jay Wallis caption. The shield remains available for later design use. Confirmed public phone: 901-808-7777, linked as tel:+19018087777 in the header, hero, next-step section, and footer. Online intake remains inactive. Jay set this branch as Netlify's production branch for the temporary preview project; it is separate from the live WordPress domain. No address, geographic coverage, biography, or credentials have been confirmed.
+
+Validation for this update: npm ci, production build, lint, and whitespace checks passed. Original image dimensions and PNG transparency were checked. Browser layout and telephone handoff on a device remain unverified. Next step: review the refreshed Netlify preview, then supply attorney introduction and service-area information.
