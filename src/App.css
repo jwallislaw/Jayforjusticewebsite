@@ -46,3 +46,24 @@
 /* Jay’s approved priorities line replaces the crowded practice links. */
 .practice-band.firm-priorities{justify-content:center;text-align:center;color:#fff;font-family:Arial,Helvetica,sans-serif;font-size:clamp(16px,1.5vw,23px);font-weight:700;letter-spacing:.3px;line-height:1.5;margin:0;padding:16px 22px;text-wrap:balance}
 @media(max-width:700px){.practice-band.firm-priorities{padding:13px 18px;font-size:16px}}
+
+/* A personal introduction with compact spacing and readable, darker type. */
+.home-introduction .intro-writing{padding:36px clamp(28px,3.4vw,64px)}
+.home-introduction .intro-writing h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(30px,2.7vw,46px);line-height:1.13;letter-spacing:-.6px;color:var(--navy)}
+.home-introduction .hope-line{font-size:clamp(14px,1.3vw,20px);letter-spacing:1.2px;line-height:1.4;margin-top:8px;color:var(--navy)}
+.home-introduction .intro-body{font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#282b45;margin-top:22px;max-width:650px}
+.home-introduction .intro-body p+p{margin-top:15px}
+.intro-brand-message{display:flex;align-items:flex-start;gap:14px;margin-top:19px;padding-top:17px;border-top:1px solid #83652b55}
+.intro-brand-message p{margin:0}
+.intro-shield{position:relative;display:block;flex:0 0 62px;width:62px;height:76px;overflow:hidden}
+.intro-shield img{position:absolute;left:-4px;top:0;width:228px;max-width:none;height:76px}
+.intro-practice-links{margin-top:20px;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.9;color:var(--navy)}
+.intro-practice-links a{text-decoration:underline;text-underline-offset:3px}
+.intro-link-divider{color:var(--gold)}
+.home-introduction .intro-writing>.button{margin-top:18px}
+.home-introduction .hero-photo{align-self:center}
+.criminal-traffic{margin-top:32px;padding:22px;border-left:3px solid var(--gold);background:#dce9f3}
+.practice-page .criminal-traffic h2{margin-top:0}
+.criminal-traffic p{line-height:1.7;margin-bottom:14px}
+.traffic-parent{margin-top:24px}
+@media(max-width:700px){.home-introduction .intro-writing{padding:28px 7% 32px}.home-introduction .intro-body{font-size:16px;line-height:1.6;margin-top:20px}.intro-practice-links{font-size:13px}.intro-shield{flex-basis:48px;width:48px;height:60px}.intro-shield img{width:180px;height:60px;left:-4px}.intro-brand-message{gap:11px}}

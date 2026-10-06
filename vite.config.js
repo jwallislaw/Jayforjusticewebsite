@@ -11,6 +11,7 @@ export default defineConfig({
         'personal-injury': fileURLToPath(new URL('./practice-areas/personal-injury/index.html', import.meta.url)),
         'divorce-family-law': fileURLToPath(new URL('./practice-areas/divorce-family-law/index.html', import.meta.url)),
         'traffic-tickets': fileURLToPath(new URL('./practice-areas/traffic-tickets/index.html', import.meta.url)),
+        'business-litigation-startups': fileURLToPath(new URL('./practice-areas/business-litigation-startups/index.html', import.meta.url)),
         'employment-law': fileURLToPath(new URL('./practice-areas/employment-law/index.html', import.meta.url)),
         home: fileURLToPath(new URL('./index.html', import.meta.url)),
         clientLogin: fileURLToPath(new URL('./client-login/index.html', import.meta.url)),
