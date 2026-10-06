@@ -32,6 +32,16 @@ function Reveal({ children, className }) {
 }
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [showBrandReveal, setShowBrandReveal] = useState(() => {
+    if (window.location.pathname !== '/' || !window.matchMedia || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return false
+    try { return window.sessionStorage.getItem('jay-brand-reveal-seen') !== 'yes' } catch { return true }
+  })
+  useEffect(() => {
+    if (!showBrandReveal) return
+    try { window.sessionStorage.setItem('jay-brand-reveal-seen', 'yes') } catch { /* Storage may be unavailable; the reveal still dismisses. */ }
+    const timer = window.setTimeout(() => setShowBrandReveal(false), 1450)
+    return () => window.clearTimeout(timer)
+  }, [showBrandReveal])
   const headerRef = useRef(null)
   useEffect(() => {
     const header = headerRef.current
@@ -49,6 +59,7 @@ export default function App() {
   const isResources = pagePath === '/resources'
   const isClientLogin = pagePath === '/client-login'
   return <>
+    {showBrandReveal && <div className="brand-reveal" aria-hidden="true"><img src="/jayforjusticelogo.png" alt="" width="2172" height="724" /></div>}
     <a className="skip-link" href="#main">Skip to content</a>
     <header className="site-header" ref={headerRef}>
       <div className="masthead">
@@ -70,6 +81,7 @@ export default function App() {
       <p className="practice-band firm-priorities">Your Freedom. Your Family. Your Business. Your Future.</p>
     </header>
     {isTrafficTickets || practiceIndex >= 0 ? <PracticePage index={practiceIndex} isTraffic={isTrafficTickets} /> : isAbout ? <AboutJay /> : isResources ? <Resources /> : isClientLogin ? <ClientLogin /> : <Home />}
+    <nav className="mobile-contact-bar" aria-label="Quick contact and client access"><a href="tel:+19018087777"><span aria-hidden="true">☎</span>Call</a><a href="sms:+19018087777"><span aria-hidden="true">✉</span>Text</a><a href="/client-login/"><span aria-hidden="true">↗</span>Client Login</a></nav>
     <footer className="site-footer"><div className="footer-top"><a className="wordmark" href="/"><BrandLogo /></a><p>Help During Dark Days.<br />Hope for Bright Tomorrows.</p><div className="footer-links"><a href="/who-is-jay-for-justice/">Who is Jay For Justice</a><a href="tel:+19018087777">Call 901-808-7777</a><a href="sms:+19018087777">Text 901-808-7777</a><a href="#main">Back to top ↑</a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Jay For Justice</span><span>Design preview · Online intake is being prepared</span></div><p className="photo-credits">Memphis skyline: <a href="https://commons.wikimedia.org/wiki/File:Downtown_Memphis.jpg">Mattbeat1981, Wikimedia Commons</a> · CC0. Temporary photography will be replaced as the design develops.</p></footer>
 
   </>
@@ -86,14 +98,14 @@ function Home() {
             <p>Legal problems affect your family, your work, your freedom, and the life you’re building. Small problems can add up. Big problems can feel overwhelming. Both deserve attention.</p>
             <p>Before becoming a lawyer, Jay Wallis spent more than 20 years navigating real-world challenges—as a father, a business owner, and someone who has been through divorce. That experience helps him understand people, their circumstances, and what matters to them.</p>
             <p>At Jay For Justice, the goal is to help solve problems—big and small. Jay brings practical judgment and out-of-the-box thinking to legal questions, exploring options that fit the person and situation.</p>
-            <div className="intro-brand-message"><span className="intro-shield" aria-hidden="true"><img src="/jayforjusticelogo.png" alt="" width="2172" height="724" /></span><p>Our shield represents protecting what matters to you. Our sword represents the resolve to act—to address small problems before they grow and meet bigger challenges with a thoughtful plan.</p></div>
+            <p className="intro-ending">Learn more about <a href="/who-is-jay-for-justice/">Jay For Justice</a>, explore our <a href="#practice-areas">practice areas</a>, or <a href="tel:+19018087777">call</a> or <a href="sms:+19018087777">text</a> to discuss what comes next.</p>
           </div>
           <nav className="intro-practice-links" aria-label="Explore our practice areas">{services.map(([title], i) => <span key={title}>{i > 0 && <span className="intro-link-divider" aria-hidden="true"> · </span>}<a href={`/practice-areas/${servicePaths[i]}/`}>{title}</a></span>)}</nav>
           <a className="button" href="/who-is-jay-for-justice/">MEET JAY WALLIS <Arrow /></a>
         </div>
         <div className="hero-photo"><img src="/jaywallis-memphis-hero.png" alt="Jay Wallis with the Memphis skyline at dusk" width="1536" height="1024" fetchPriority="high" /></div>
       </section>
-      <div className="principle-strip"><span aria-hidden="true">★</span><p>When the stakes are personal,<br /><strong>the approach should be thoughtful.</strong></p><span aria-hidden="true">★</span></div>
+      <section className="shield-story section-shell" aria-labelledby="shield-story-title"><img className="shield-story-mark" src="/jayforjusticeshield.jpg" alt="Gold Jay For Justice shield and sword" width="1280" height="1280" loading="lazy" /><div><p className="eyebrow">THE MEANING BEHIND OUR SHIELD</p><h2 id="shield-story-title">Protect what matters.<br /><em>Take thoughtful action.</em></h2><p>Our shield represents protecting what matters to you. Our sword represents the resolve to act—to address small problems before they grow and meet bigger challenges with a thoughtful plan.</p></div></section>
       <section className="story-section section-shell" id="our-approach" aria-labelledby="story-title">
         <div className="story-copy"><div className="story-heading"><p className="eyebrow">ABOUT JAY FOR JUSTICE</p><h2 id="story-title">A person.<br /><em>Not just a case.</em></h2></div><p>Behind a legal question is a person trying to protect what matters. Jay For Justice starts with the situation in front of you: your freedom, your family, and your future.</p><p>Get to know Jay Wallis and find a starting point for your next step.</p><a className="button" href="/who-is-jay-for-justice/">MEET JAY WALLIS <Arrow /></a></div>
         <Reveal className="story-visual"><div className="story-accent" aria-hidden="true" /><img src="/memphis-skyline.jpg" alt="Downtown Memphis and the Mississippi River" width="1600" height="900" loading="lazy" /><span className="story-photo-label">MEMPHIS, TENNESSEE</span></Reveal>
