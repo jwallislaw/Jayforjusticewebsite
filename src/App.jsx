@@ -77,13 +77,13 @@ function Home() {
   return (
     <main id="main">
       <section className="home-introduction" id="home" aria-labelledby="hero-title">
-        <div className="intro-photo"><div className="portrait-focus"><img src="/jaywallisheadshot.JPG" alt="Attorney Jay Wallis" width="1638" height="2048" fetchPriority="high" /><span className="portrait-caption">JAY WALLIS <span aria-hidden="true">★</span> MEMPHIS, TN</span></div></div>
         <div className="intro-writing">
           <h1 id="hero-title">Help During Dark Days.</h1>
           <p className="hope-line">HOPE FOR BRIGHT TOMORROWS</p>
           <div className="intro-body"><p>Legal questions can affect your freedom, your family, and your financial future. Understanding your options is a place to begin.</p><p>Jay For Justice brings criminal defense, bankruptcy, family law, traffic tickets, and employment law information together in one place. Explore the area that fits your situation, or call or text the firm to discuss the next step.</p><p>Meet <a href="/who-is-jay-for-justice/">Jay Wallis</a>, explore our <a href="#practice-areas">practice areas</a>, and find a starting point for what comes next.</p></div>
           <a className="button" href="/who-is-jay-for-justice/">WHO IS JAY FOR JUSTICE <Arrow /></a>
         </div>
+        <div className="hero-photo"><img src="/jaywallis-memphis-hero.png" alt="Jay Wallis with the Memphis skyline at dusk" width="1536" height="1024" fetchPriority="high" /></div>
       </section>
       <div className="principle-strip"><span aria-hidden="true">★</span><p>When the stakes are personal,<br /><strong>the approach should be thoughtful.</strong></p><span aria-hidden="true">★</span></div>
       <section className="story-section section-shell" id="our-approach" aria-labelledby="story-title">

@@ -1,3 +1,7 @@
+## New homepage hero — October 6, 2026
+
+Jay supplied Jaywallismemphishero.png. Added it unchanged as public/jaywallis-memphis-hero.png. Homepage wording now precedes the image and sits on the left on desktop; the new photo sits on the right with its full composition visible. On mobile the wording comes first, followed by the full-width photo. About portrait, social-preview photo, and other sections remain unchanged. Build/lint and rendered hero ordering checked. Visual review of the deployed responsive layout remains pending. Branch: codex/chat-10-homepage; Netlify temporary preview only.
+
 ## Logo alignment correction — October 5, 2026
 
 Moved the CSS cover for the original raster slogan from 61% to 65% down the logo so the J descenders remain visible. Positioned the readable slogan directly below the name, inside the logo's text area, in gold with a decorative star on each side. Removed the linked slogan's underline. Responsive sizing covers header and footer logos without modifying the uploaded image. Build/lint passed; Jay should review the rendered alignment after Netlify deploys.
