@@ -1,3 +1,7 @@
+## Branded sharing image — October 6, 2026
+
+Jay clarified this change is for the preview shown when sending a link. Created a separate social card with the supplied Memphis photo, white “Fighting for What Matters” on the left, exactly five white decorative stars, “Jay Wallis Attorney at Law,” and “Jay For Justice.” Generated with the built-in image tool and visually checked. Saved public/jay-for-justice-share-v2.jpg at 1200 × 628. All nine HTML entries use this versioned image URL with Open Graph dimensions and a large-image social card. Homepage social title now uses Fighting for What Matters; page layout is unchanged. Generation prompt saved in docs/share-card-prompt.txt. Build and metadata validation passed; messaging-app appearance remains unverified. Next: send the Netlify homepage link to review the card; platforms may retain older previews.
+
 ## New homepage hero — October 6, 2026
 
 Jay supplied Jaywallismemphishero.png. Added it unchanged as public/jaywallis-memphis-hero.png. Homepage wording now precedes the image and sits on the left on desktop; the new photo sits on the right with its full composition visible. On mobile the wording comes first, followed by the full-width photo. About portrait, social-preview photo, and other sections remain unchanged. Build/lint and rendered hero ordering checked. Visual review of the deployed responsive layout remains pending. Branch: codex/chat-10-homepage; Netlify temporary preview only.
