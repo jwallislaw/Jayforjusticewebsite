@@ -42,3 +42,7 @@
 .hero-photo img{display:block;width:100%;height:auto;object-fit:contain}
 @media(max-width:1000px){.home-introduction .intro-writing{padding:45px 30px}.home-introduction .intro-body{margin-top:25px}}
 @media(max-width:700px){.home-introduction{grid-template-columns:1fr}.home-introduction .intro-writing{padding:40px 7%}.hero-photo{background:var(--cream)}}
+
+/* Jay’s approved priorities line replaces the crowded practice links. */
+.practice-band.firm-priorities{justify-content:center;text-align:center;color:#fff;font-family:Arial,Helvetica,sans-serif;font-size:clamp(16px,1.5vw,23px);font-weight:700;letter-spacing:.3px;line-height:1.5;margin:0;padding:16px 22px;text-wrap:balance}
+@media(max-width:700px){.practice-band.firm-priorities{padding:13px 18px;font-size:16px}}
