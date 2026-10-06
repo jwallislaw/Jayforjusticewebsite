@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
 const services = [
-  ['Criminal defense', 'Your freedom. Your future.', 'A criminal charge can put everything in question. Start by understanding the charge, the process, and the decisions ahead.'],
-  ['Bankruptcy', 'A path forward from debt.', 'When debt feels unmanageable, understanding your options is the first step toward making a plan.'],
-  ['Divorce & family law', 'What matters at home.', 'Changes to your family call for careful decisions about your children, your finances, and your next chapter.'],
-  ['Traffic tickets', 'Small citation. Real consequences.', 'A ticket can raise questions about your license, your driving record, and what to do before your court date.'],
+  ['Criminal Defense', 'Your freedom. Your future.', 'A criminal charge can put everything in question. Start by understanding the charge, the process, and the decisions ahead.'],
+  ['Personal Injury', 'Your recovery. Your next step.', 'An injury can affect your health, your work, and your daily life. Contact Jay For Justice to discuss your situation and the next step.'],
+  ['Family Law', 'What matters at home.', 'Changes to your family call for careful decisions about your children, your finances, and your next chapter.'],
   ['Employment Law', 'Your work. Your livelihood.', 'Workplace concerns can affect your livelihood and your next steps. Contact Jay For Justice to discuss your situation.'],
+  ['Traffic Tickets', 'Small citation. Real consequences.', 'A ticket can raise questions about your license, your driving record, and what to do before your court date.'],
 ]
-const servicePaths = ['criminal-defense', 'bankruptcy', 'divorce-family-law', 'traffic-tickets', 'employment-law']
+const servicePaths = ['criminal-defense', 'personal-injury', 'divorce-family-law', 'employment-law', 'traffic-tickets']
 const Arrow = () => <span aria-hidden="true">↗</span>
 function BrandLogo() {
   return <><span className="logo-art"><img className="firm-logo" src="/jayforjusticelogo.png" alt="Jay For Justice" width="2172" height="724" /></span><span className="brand-tagline"><span aria-hidden="true">★</span><span>Fighting For What Matters</span><span aria-hidden="true">★</span></span></>
@@ -65,7 +65,7 @@ export default function App() {
         <div className="contact-band" aria-label="Call or text Jay For Justice"><a href="tel:+19018087777">CALL</a><span aria-hidden="true">|</span><a href="sms:+19018087777">TEXT</a><span className="band-number">901-808-7777</span></div>
         <a className="about-band" href="/client-login/" onClick={closeMenu}>CLIENT MYCASE LOGIN</a>
       </div>
-      <nav className="practice-band" aria-label="Practice areas">{services.map(([title], i) => <span className="practice-band-item" key={title}>{i > 0 && <span className="practice-divider" aria-hidden="true">•</span>}<a href={`/practice-areas/${servicePaths[i]}/`} aria-current={practiceIndex === i ? 'page' : undefined} onClick={closeMenu}>{i === 2 ? 'FAMILY LAW' : title.toUpperCase()}</a></span>)}</nav>
+      <nav className="practice-band" aria-label="Practice areas">{services.map(([title], i) => <span className="practice-band-item" key={title}>{i > 0 && <span className="practice-divider" aria-hidden="true">★</span>}<a href={`/practice-areas/${servicePaths[i]}/`} aria-current={practiceIndex === i ? 'page' : undefined} onClick={closeMenu}>{title.toUpperCase()}</a></span>)}</nav>
     </header>
     {practiceIndex >= 0 ? <PracticePage index={practiceIndex} /> : isAbout ? <AboutJay /> : isResources ? <Resources /> : isClientLogin ? <ClientLogin /> : <Home />}
     <footer className="site-footer"><div className="footer-top"><a className="wordmark" href="/"><BrandLogo /></a><p>Help During Dark Days.<br />Hope for Bright Tomorrows.</p><div className="footer-links"><a href="/who-is-jay-for-justice/">Who is Jay For Justice</a><a href="tel:+19018087777">Call 901-808-7777</a><a href="sms:+19018087777">Text 901-808-7777</a><a href="#main">Back to top ↑</a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Jay For Justice</span><span>Design preview · Online intake is being prepared</span></div><p className="photo-credits">Memphis skyline: <a href="https://commons.wikimedia.org/wiki/File:Downtown_Memphis.jpg">Mattbeat1981, Wikimedia Commons</a> · CC0. Temporary photography will be replaced as the design develops.</p></footer>
@@ -80,7 +80,7 @@ function Home() {
         <div className="intro-writing">
           <h1 id="hero-title">Help During Dark Days.</h1>
           <p className="hope-line">HOPE FOR BRIGHT TOMORROWS</p>
-          <div className="intro-body"><p>Legal questions can affect your freedom, your family, and your financial future. Understanding your options is a place to begin.</p><p>Jay For Justice brings criminal defense, bankruptcy, family law, traffic tickets, and employment law information together in one place. Explore the area that fits your situation, or call or text the firm to discuss the next step.</p><p>Meet <a href="/who-is-jay-for-justice/">Jay Wallis</a>, explore our <a href="#practice-areas">practice areas</a>, and find a starting point for what comes next.</p></div>
+          <div className="intro-body"><p>Legal questions can affect your freedom, your family, and your financial future. Understanding your options is a place to begin.</p><p>Jay For Justice brings criminal defense, personal injury, family law, employment law, and traffic ticket information together in one place. Explore the area that fits your situation, or call or text the firm to discuss the next step.</p><p>Meet <a href="/who-is-jay-for-justice/">Jay Wallis</a>, explore our <a href="#practice-areas">practice areas</a>, and find a starting point for what comes next.</p></div>
           <a className="button" href="/who-is-jay-for-justice/">WHO IS JAY FOR JUSTICE <Arrow /></a>
         </div>
         <div className="hero-photo"><img src="/jaywallis-memphis-hero.png" alt="Jay Wallis with the Memphis skyline at dusk" width="1536" height="1024" fetchPriority="high" /></div>
@@ -103,7 +103,7 @@ function AboutJay() {
       <div className="hero-copy"><p className="eyebrow">MEET JAY WALLIS</p><h1 id="about-title">Who is<br /><em>Jay For Justice?</em></h1><p className="hero-description">Jay Wallis is the attorney behind Jay For Justice.<br />Your freedom. Your family. Your future.</p><div className="hero-actions"><a className="button" href="tel:+19018087777">Call 901-808-7777 <Arrow /></a><a className="button button-outline" href="sms:+19018087777">Text Jay For Justice <Arrow /></a></div></div>
       <figure className="attorney-portrait"><img src="/jaywallisheadshot.JPG" alt="Attorney Jay Wallis" width="1638" height="2048" fetchPriority="high" /><figcaption><span>Jay Wallis</span><small>JAY FOR JUSTICE</small></figcaption></figure>
     </section>
-    <section className="about-introduction section-shell" aria-labelledby="about-intro-title"><div><p className="eyebrow">THE PERSON BEHIND THE FIRM</p><h2 id="about-intro-title">Jay Wallis.<br /><em>Jay For Justice.</em></h2></div><div><p className="large-copy">Fighting for what matters.</p><p>Jay For Justice brings criminal defense, bankruptcy, family law, traffic tickets, and employment law information together in one place. Start with the area that fits your situation, or contact the firm to discuss your next step.</p><a className="about-practice-link" href="/#practice-areas">Explore practice areas <Arrow /></a><p className="legal-note">Contacting the firm does not establish an attorney-client relationship. Avoid sharing confidential details until the firm provides instructions.</p></div></section>
+    <section className="about-introduction section-shell" aria-labelledby="about-intro-title"><div><p className="eyebrow">THE PERSON BEHIND THE FIRM</p><h2 id="about-intro-title">Jay Wallis.<br /><em>Jay For Justice.</em></h2></div><div><p className="large-copy">Fighting for what matters.</p><p>Jay For Justice brings criminal defense, personal injury, family law, employment law, and traffic ticket information together in one place. Start with the area that fits your situation, or contact the firm to discuss your next step.</p><a className="about-practice-link" href="/#practice-areas">Explore practice areas <Arrow /></a><p className="legal-note">Contacting the firm does not establish an attorney-client relationship. Avoid sharing confidential details until the firm provides instructions.</p></div></section>
   </main>
 }
 

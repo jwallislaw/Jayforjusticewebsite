@@ -8,7 +8,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         'criminal-defense': fileURLToPath(new URL('./practice-areas/criminal-defense/index.html', import.meta.url)),
-        'bankruptcy': fileURLToPath(new URL('./practice-areas/bankruptcy/index.html', import.meta.url)),
+        'personal-injury': fileURLToPath(new URL('./practice-areas/personal-injury/index.html', import.meta.url)),
         'divorce-family-law': fileURLToPath(new URL('./practice-areas/divorce-family-law/index.html', import.meta.url)),
         'traffic-tickets': fileURLToPath(new URL('./practice-areas/traffic-tickets/index.html', import.meta.url)),
         'employment-law': fileURLToPath(new URL('./practice-areas/employment-law/index.html', import.meta.url)),
