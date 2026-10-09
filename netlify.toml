@@ -5,10 +5,9 @@
 [build.environment]
   NODE_VERSION = "22"
 
-# This branch is a design preview. Review before removing indexing guards.
+# Public marketing pages are crawlable after the approved domain launch.
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
