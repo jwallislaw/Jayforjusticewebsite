@@ -134,7 +134,7 @@ function AboutJay() {
       <div className="about-story-copy">
         <p>At six years old, Jay was in foster care. He did not understand why he could not go home to his dad, the man who had raised him as his own and had custody of Jay and his two sisters.</p>
         <p>He remembers lawyers visiting to learn about his situation and ask what he wanted. He remembers court hearings, the large courtroom, and speaking with the judge. Those encounters sparked a dream: one day, he wanted to become a lawyer.</p>
-        <p>The road to that dream would take him through parenthood, loss, business ownership, and his own experience with the justice system.</p>
+        <p>The road to that dream would take him through parenthood, loss, business ownership, and a renewed commitment to helping people.</p>
       </div>
     </section>
 
@@ -157,12 +157,9 @@ function AboutJay() {
     <aside className="about-reading-quote section-shell" aria-label="Jay on perseverance"><blockquote>“The barrier that is hardest to cross is what is between our ears.”</blockquote><p>Jay Wallis</p></aside>
 
     <section className="about-story-section about-story-tint section-shell" aria-labelledby="justice-story-title">
-      <div><p className="eyebrow">A PERSONAL TURNING POINT</p><h2 id="justice-story-title">The importance<br /><em>of being heard.</em></h2></div>
+      <div><p className="eyebrow">A CALLING TO HELP</p><h2 id="justice-story-title">The importance<br /><em>of being heard.</em></h2></div>
       <div className="about-story-copy">
-        <p>Jay’s childhood dream returned with new urgency when he faced criminal charges for conduct he maintains he did not commit. He recalls meeting with six attorneys who advised him to accept a plea before reviewing the evidence.</p>
-        <p>He ultimately found William Kendrick and Mark Shelnutt, attorneys willing to examine the case and take it to trial. Jay took an eight-month sabbatical from his business, worked alongside them at their firm, and helped research issues in his case. Watching them counsel clients showed him the value of steady guidance and the willingness to acknowledge a question and investigate it.</p>
-        <p>After a trial lasting about a week and a half, a jury found Jay not guilty. The experience reinforced his commitment to becoming a lawyer once his son graduated from high school.</p>
-        <p>He understands how much it matters to have someone listen, study the facts, and help your voice be heard.</p>
+        <p>Seeing people go unheard—and the pressure to accept plea agreements simply to end prolonged detention—reinforced Jay’s commitment to becoming a lawyer. He wanted to help people navigate life’s difficult challenges, understand their options, and have their voices heard.</p>
       </div>
     </section>
 
@@ -171,7 +168,7 @@ function AboutJay() {
       <div className="about-story-copy">
         <p>Over his twenty years in business, Jay had taken college courses as time allowed. When his son graduated from high school and entered the Navy’s nuclear program, Jay was ready to pursue his own lifelong dream. During the COVID pandemic, he found in-person classes through Troy University and completed his remaining college coursework in one year.</p>
         <p>He went on to the University of Memphis Cecil C. Humphreys School of Law. In its tax clinic, he helped people work through their tax filings, explained complicated rules, and helped them address overdue returns.</p>
-        <p>That work confirmed what he enjoyed most: understanding a difficult problem and helping another person understand it, too. His experiences as a defendant, a juror, and a law student working in a prosecutor’s office also gave him different perspectives on the courtroom and the people whose lives are affected there.</p>
+        <p>That work confirmed what he enjoyed most: understanding a difficult problem and helping another person understand it, too. His experiences as a juror and a law student working in a prosecutor’s office also gave him different perspectives on the courtroom and the people whose lives are affected there.</p>
       </div>
     </section>
 
