@@ -118,7 +118,7 @@ function Home() {
 }
 
 function AboutJay() {
-  return <main id="main" className="about-page">
+  return <main id="main" className="about-page about-page-compact">
     <section className="hero about-hero section-shell" aria-labelledby="about-title">
       <div className="hero-copy">
         <p className="eyebrow">MEET JAY WALLIS</p>
@@ -126,7 +126,7 @@ function AboutJay() {
         <p className="hero-description">Father. Business owner. Advocate.<br />Get to know the person behind Jay For Justice.</p>
         <div className="hero-actions"><a className="button" href="#jay-story">Read Jay’s story <Arrow /></a><a className="button button-outline" href="tel:+19018087777">Call 901-808-7777 <Arrow /></a></div>
       </div>
-      <figure className="attorney-portrait"><img src="/jaywallisheadshot.JPG" alt="Jay Wallis" width="1638" height="2048" fetchPriority="high" /><figcaption><span>Jay Wallis</span><small>JAY FOR JUSTICE · MEMPHIS, TN</small></figcaption></figure>
+      <figure className="attorney-portrait about-family-photo"><img src="/jay-and-jenna.svg" alt="Jay Wallis and Jenna outside a building with a tiger statue" width="259" height="562" fetchPriority="high" /><figcaption><span>Jay &amp; Jenna</span></figcaption></figure>
     </section>
 
     <section className="about-story-section section-shell" id="jay-story" aria-labelledby="childhood-title">
@@ -154,6 +154,8 @@ function AboutJay() {
       </div>
     </section>
 
+    <aside className="about-reading-quote section-shell" aria-label="Jay on perseverance"><blockquote>“The barrier that is hardest to cross is what is between our ears.”</blockquote><p>Jay Wallis</p></aside>
+
     <section className="about-story-section about-story-tint section-shell" aria-labelledby="justice-story-title">
       <div><p className="eyebrow">A PERSONAL TURNING POINT</p><h2 id="justice-story-title">The importance<br /><em>of being heard.</em></h2></div>
       <div className="about-story-copy">
@@ -173,8 +175,10 @@ function AboutJay() {
       </div>
     </section>
 
+    <aside className="about-reading-quote section-shell" aria-label="Jay on justice"><blockquote>“Justice is for everyone.”</blockquote><p>Jay Wallis</p></aside>
+
     <section className="about-values section-shell" aria-labelledby="justice-title">
-      <div className="about-values-heading"><p className="eyebrow">WHAT JAY FOR JUSTICE STANDS FOR</p><h2 id="justice-title">Justice is<br /><em>for everyone.</em></h2><p>Everyone deserves to be heard and treated fairly. Accountability, fairness, and the opportunity to move forward belong in the same conversation.</p></div>
+      <div className="about-values-heading"><p className="eyebrow">WHAT JAY FOR JUSTICE STANDS FOR</p><h2 id="justice-title">A voice.<br /><em>A fair chance.</em></h2><p>Everyone deserves to be heard and treated fairly. Accountability, fairness, and the opportunity to move forward belong in the same conversation.</p></div>
       <div className="about-values-grid">
         <article><h3>Listen before deciding.</h3><p>Understanding starts with your account of what happened, your concerns, and what you hope to achieve. Honest communication helps Jay assess whether he can help and whether you can work well together.</p></article>
         <article><h3>Study the facts.</h3><p>Jay brings curiosity and persistence to the work. His approach is to examine the evidence, identify the questions that need answers, and research what he needs to understand.</p></article>
