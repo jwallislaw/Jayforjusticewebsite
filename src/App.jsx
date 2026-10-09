@@ -154,6 +154,12 @@ function AboutJay() {
       </div>
     </section>
 
+    <section className="about-promise about-personal-story section-shell" aria-labelledby="personal-story-title">
+      <p className="eyebrow" id="personal-story-title">FIGHTING FOR WHAT MATTERS</p>
+      <p className="personal-story-statement">Jay knows what it feels like to be falsely accused and advised to accept a plea for something he did not do. He refused that deal and fought for what mattered: the truth, his freedom, his family, and his business.</p>
+      <p className="about-promise-note">That experience shapes his commitment to listening, examining the evidence, and helping clients make informed decisions about their own lives.</p>
+    </section>
+
     <section className="about-values section-shell" aria-labelledby="justice-title">
       <div className="about-values-heading"><p className="eyebrow">HOW WE WORK TOGETHER</p><h2 id="justice-title">Your situation.<br /><em>A thoughtful plan.</em></h2><p>Good counsel starts with listening and honest communication. Together, we identify what matters, discuss realistic options, and decide how to move forward.</p></div>
       <div className="about-values-grid">
