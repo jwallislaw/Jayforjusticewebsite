@@ -133,8 +133,8 @@ function AboutJay() {
       <div><p className="eyebrow">JAY’S WHY</p><h2 id="childhood-title">A voice.<br /><em>A way forward.</em></h2></div>
       <div className="about-story-copy">
         <p>At six years old, Jay was in foster care, unsure why he could not go home to his dad. Lawyers visited, listened, and asked what he wanted. Those encounters sparked his dream of becoming a lawyer.</p>
-        <p>Life brought responsibilities first. Jay became a father as a high-school senior. When his dad died of lung cancer a few years later, he took over the family’s small locksmith business, with a son to raise and two sisters still at home.</p>
-        <p>He taught himself the work through trade magazines and long days in Georgia junkyards. Over twenty years, he grew the locksmith and security business across west central Georgia and east Alabama. He learned to solve unfamiliar problems, keep learning, and earn trust by following through.</p>
+        <p>Life brought responsibilities first. Jay became a father as a high-school senior. A few years later, his dad, the solo operator of a small locksmith business, died of lung cancer. With a son to raise and two sisters still at home, Jay took over the business. His dad’s drive and work ethic had already become part of who he was.</p>
+        <p>He taught himself the work through trade magazines and long days in Georgia junkyards, making keys in the summer heat. As his skills grew, he taught others. Over twenty years, he expanded the locksmith and security business across west central Georgia and east Alabama. His dad’s example stayed with him: work hard, keep learning, and earn trust by following through.</p>
       </div>
     </section>
 
@@ -154,8 +154,6 @@ function AboutJay() {
       </div>
     </section>
 
-    <aside className="about-reading-quote section-shell" aria-label="Jay on justice"><blockquote>“Justice is for everyone.”</blockquote><p>Jay Wallis</p></aside>
-
     <section className="about-values section-shell" aria-labelledby="justice-title">
       <div className="about-values-heading"><p className="eyebrow">HOW WE WORK TOGETHER</p><h2 id="justice-title">Your situation.<br /><em>A thoughtful plan.</em></h2><p>Good counsel starts with listening and honest communication. Together, we identify what matters, discuss realistic options, and decide how to move forward.</p></div>
       <div className="about-values-grid">
@@ -166,9 +164,20 @@ function AboutJay() {
       </div>
     </section>
 
+    <aside className="about-reading-quote about-justice-quote section-shell" aria-label="Jay on justice"><blockquote>“Justice is for everyone.”</blockquote><p>Jay Wallis</p></aside>
+
+    <section className="about-story-section about-justice-meaning section-shell" aria-labelledby="justice-meaning-title">
+      <div><p className="eyebrow">WHAT JUSTICE MEANS TO JAY</p><h2 id="justice-meaning-title">Fairness.<br /><em>A voice. A future.</em></h2></div>
+      <div className="about-story-copy">
+        <p>To Jay, justice means everyone has the opportunity to be heard and treated fairly. It belongs to people who have been hurt or wronged, and to people accused of doing wrong.</p>
+        <p>When someone has made a mistake, accountability should leave room for rehabilitation, help, and guidance. When someone disputes an accusation, their voice and the evidence deserve careful attention and a fair hearing.</p>
+        <p>That belief guides Jay For Justice: understand the person, examine the facts, and work toward a fair outcome that gives them a path forward.</p>
+      </div>
+    </section>
+
     <section className="about-story-section about-contact section-shell" aria-labelledby="about-contact-title">
       <div><p className="eyebrow">START A CONVERSATION</p><h2 id="about-contact-title">Help during dark days.<br /><em>Hope for brighter tomorrows.</em></h2></div>
-      <div className="about-story-copy"><p>Tell Jay what you are facing and what matters to you. The first step is a conversation about whether and how he can help.</p><div className="holding-actions"><a className="button" href="tel:+19018087777">Call 901-808-7777 <Arrow /></a><a className="button" href="sms:+19018087777">Text Jay For Justice <Arrow /></a></div><p className="legal-note">Contacting the firm does not establish an attorney-client relationship. Avoid sharing confidential details until the firm provides instructions.</p></div>
+      <div className="about-story-copy"><p>You do not have to have every answer before reaching out. Tell Jay what you are facing and what matters to you. Together, you can discuss your options and whether he can help.</p><p>Call or text to arrange an appointment and a time to talk.</p><div className="holding-actions"><a className="button" href="tel:+19018087777" aria-label="Call 901-808-7777 to schedule an appointment">Schedule an appointment <Arrow /></a><a className="button" href="sms:+19018087777">Text to request a time <Arrow /></a></div><p className="legal-note">Contacting the firm does not establish an attorney-client relationship. Avoid sharing confidential details until the firm provides instructions.</p></div>
     </section>
 
     <section className="about-shield section-shell" aria-labelledby="about-shield-title">
