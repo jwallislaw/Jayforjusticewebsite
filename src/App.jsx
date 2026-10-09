@@ -160,15 +160,17 @@ function AboutJay() {
       <div><p className="eyebrow">A CALLING TO HELP</p><h2 id="justice-story-title">The importance<br /><em>of being heard.</em></h2></div>
       <div className="about-story-copy">
         <p>Seeing people go unheard—and the pressure to accept plea agreements simply to end prolonged detention—reinforced Jay’s commitment to becoming a lawyer. He wanted to help people navigate life’s difficult challenges, understand their options, and have their voices heard.</p>
+        <p>Working alongside his friends, attorneys Mark Shelnutt and William Kendrick, showed Jay what steady guidance could mean to someone facing a difficult chapter. Seeing how they helped people through dark days toward brighter tomorrows strengthened his determination to return to school and pursue law.</p>
       </div>
     </section>
 
     <section className="about-story-section section-shell" aria-labelledby="education-title">
       <div><p className="eyebrow">RETURNING TO THE DREAM</p><h2 id="education-title">From learning<br /><em>to helping.</em></h2></div>
       <div className="about-story-copy">
-        <p>Over his twenty years in business, Jay had taken college courses as time allowed. When his son graduated from high school and entered the Navy’s nuclear program, Jay was ready to pursue his own lifelong dream. During the COVID pandemic, he found in-person classes through Troy University and completed his remaining college coursework in one year.</p>
-        <p>He went on to the University of Memphis Cecil C. Humphreys School of Law. In its tax clinic, he helped people work through their tax filings, explained complicated rules, and helped them address overdue returns.</p>
-        <p>That work confirmed what he enjoyed most: understanding a difficult problem and helping another person understand it, too. His experiences as a juror and a law student working in a prosecutor’s office also gave him different perspectives on the courtroom and the people whose lives are affected there.</p>
+        <p>Over his twenty years in business, Jay had taken college courses as time allowed. When his son graduated from high school and became a “Navy Nuke,” Jay was ready to pursue his own lifelong dream. During the COVID pandemic, he found in-person classes through Troy University and completed his remaining college coursework in one year.</p>
+        <p>At the University of Memphis Cecil C. Humphreys School of Law, the most meaningful opportunities were those that allowed him to serve people in the community. Through tax clinics, an externship with the Shelby County District Attorney’s Office, and work in the chambers of a U.S. bankruptcy judge, Jay learned from different perspectives while helping people work through difficult circumstances.</p>
+        <p>After law school, he worked alongside criminal-defense attorney John Dolan, assisting with cases ranging from minor misdemeanors to first-degree premeditated murder. Across those experiences, the purpose remained the same: understand the situation, do the work, and help the person whose life is affected.</p>
+        <p>What Jay enjoys most is helping others—making a complicated problem easier to understand and helping someone find a path forward.</p>
       </div>
     </section>
 
