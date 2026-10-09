@@ -119,3 +119,32 @@
   .mobile-contact-bar span{font-family:Arial,sans-serif;font-size:26px;line-height:1;color:var(--gold)}
 }
 @media(max-width:360px){.masthead .brand-tagline{font-size:8px;gap:3px;letter-spacing:0}.home-introduction .intro-writing h1{font-size:36px}.home-introduction .hope-line{font-size:21px}}
+
+/* Jay's personal story: scoped styles preserve the other pages. */
+.about-page .about-hero h1{font-size:clamp(42px,4.6vw,66px);line-height:1.12}
+.about-story-section{display:grid;grid-template-columns:1fr 1.35fr;gap:8%;padding-top:76px;padding-bottom:76px}
+.about-story-section h2,.about-values h2{font-size:clamp(34px,3.6vw,50px);line-height:1.15}
+.about-story-copy{max-width:720px;font-size:17px;line-height:1.9;color:var(--muted)}
+.about-story-copy>p+p{margin-top:22px}
+.about-story-tint{background:var(--cream)}
+.about-promise{background:var(--navy);color:#fff;padding-top:65px;padding-bottom:65px;text-align:center}
+.about-promise .eyebrow{color:#dec594;margin-bottom:22px}
+.about-promise blockquote{margin:0 auto;max-width:900px;font-family:Georgia,serif;font-size:clamp(28px,3.3vw,46px);line-height:1.4;color:#dec594}
+.about-promise-note{max-width:640px;margin:24px auto 0;font-size:16px;line-height:1.8;color:#d0d7d9}
+.about-values{padding-top:76px;padding-bottom:76px;background:var(--cream)}
+.about-values-heading{max-width:690px;margin-bottom:38px}
+.about-values-heading>p:last-child{margin-top:24px;font-size:17px;line-height:1.85;color:var(--muted)}
+.about-values-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 48px}
+.about-values-grid article{border-top:2px solid var(--gold);padding-top:24px}
+.about-values-grid h3{font-family:Georgia,serif;font-weight:400;font-size:26px;line-height:1.35;margin-bottom:15px}
+.about-values-grid p{font-size:16px;line-height:1.85;color:var(--muted)}
+.about-contact .legal-note{font-size:12px}
+#jay-story{scroll-margin-top:calc(var(--header-height,240px) + 24px)}
+@media(max-width:700px){
+  .about-story-section{grid-template-columns:1fr;gap:28px;padding-top:48px;padding-bottom:48px}
+  .about-story-copy{font-size:16px;line-height:1.85}
+  .about-page .about-hero h1{font-size:clamp(38px,9vw,56px)}
+  .about-promise{padding-top:48px;padding-bottom:48px}
+  .about-values{padding-top:48px;padding-bottom:48px}
+  .about-values-grid{grid-template-columns:1fr;gap:28px}
+}
