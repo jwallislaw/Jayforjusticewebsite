@@ -204,3 +204,28 @@
  .footer-links a{font-size:16px}
  .footer-links a:last-child{font-size:14px}
 }
+
+/* Larger text, tighter leading, and a stronger gold/navy closing rhythm. */
+.about-page-compact .about-story-copy{font-size:18px;line-height:1.5}
+.about-page-compact .about-story-copy>p+p{margin-top:13px}
+.about-page-compact .about-values-heading>p:last-child{font-size:18px;line-height:1.5}
+.about-page-compact .about-values-grid p{font-size:17px;line-height:1.5}
+.about-page-compact .about-values-grid h3{font-size:25px}
+.about-page-compact .about-promise-note{font-size:17px;line-height:1.5}
+.about-page-compact .about-shield p:not(.eyebrow){font-size:18px;line-height:1.5}
+.about-page-compact .about-story-section h2 em,.about-page-compact .about-values h2 em{color:var(--gold)}
+.about-page-compact .about-values{background:#e8f2fa}
+.about-page-compact .about-values-grid article{background:#ffffff8c;border-top:3px solid var(--gold);padding:18px 20px}
+.about-page-compact .about-justice-quote{background:var(--navy);border-left:6px solid #dec594;padding-top:30px;padding-bottom:30px}
+.about-page-compact .about-justice-quote blockquote{color:#dec594;font-size:clamp(28px,3vw,38px)}
+.about-page-compact .about-justice-quote>p{color:#e1e6ef}
+.about-page-compact .about-justice-meaning{background:#e8f2fa}
+.about-page-compact .about-contact{background:#f4ebd8;border-top:3px solid var(--gold)}
+.about-page-compact .about-contact .button{font-size:16px;line-height:1.3}
+.about-page-compact .about-contact .holding-actions{gap:12px}
+@media(max-width:700px){
+ .about-page-compact .about-story-copy{font-size:17px;line-height:1.5}
+ .about-page-compact .about-values-grid p{font-size:17px;line-height:1.5}
+ .about-page-compact .about-shield p:not(.eyebrow){font-size:17px}
+ .about-page-compact .about-values-grid article{padding:16px 18px}
+}
