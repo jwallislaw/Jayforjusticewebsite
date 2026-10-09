@@ -195,3 +195,12 @@
 .about-shield p:not(.eyebrow){font-size:16px;line-height:1.6;color:#d0d7d9;max-width:760px}
 .about-shield p+p{margin-top:12px}
 @media(max-width:700px){.about-shield{grid-template-columns:1fr;gap:24px;padding-top:30px;padding-bottom:30px}.about-shield>img{max-width:170px}}
+
+/* Larger desktop footer content, within the existing navy area. */
+@media(min-width:1101px){
+ .site-footer .firm-logo{width:clamp(300px,27vw,390px)}
+ .site-footer .brand-tagline{font-size:11px}
+ .footer-top>p{font-size:clamp(24px,1.95vw,28px);line-height:1.35}
+ .footer-links a{font-size:16px}
+ .footer-links a:last-child{font-size:14px}
+}
