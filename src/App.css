@@ -148,3 +148,40 @@
   .about-values{padding-top:48px;padding-bottom:48px}
   .about-values-grid{grid-template-columns:1fr;gap:28px}
 }
+
+/* Compact About layout, following Jay's desktop review. */
+.about-page-compact .about-hero{grid-template-columns:minmax(0,1.6fr) minmax(220px,.7fr);padding-top:38px;padding-bottom:38px;gap:7%;align-items:center}
+.about-page-compact .about-hero h1{font-size:clamp(36px,3.7vw,54px);line-height:1.1}
+.about-page-compact .hero-description{margin-top:18px;line-height:1.5}
+.about-page-compact .hero-actions{margin-top:22px}
+.about-page-compact .about-family-photo{max-width:259px;justify-self:center}
+.about-page-compact .about-family-photo>img{aspect-ratio:auto;border-radius:6px;object-fit:contain;object-position:center;width:100%;height:auto;max-height:430px}
+.about-page-compact .about-family-photo figcaption{padding-top:10px}
+.about-page-compact .about-family-photo figcaption>span{font-size:18px}
+.about-page-compact .about-story-section{grid-template-columns:minmax(0,.8fr) minmax(0,1.7fr);gap:6%;padding-top:38px;padding-bottom:38px;border-bottom:1px solid #c9d4df}
+.about-page-compact .eyebrow{margin-bottom:12px}
+.about-page-compact .about-story-section h2,.about-page-compact .about-values h2{font-size:clamp(30px,2.8vw,39px);line-height:1.13}
+.about-page-compact .about-story-copy{font-size:16px;line-height:1.6;max-width:760px}
+.about-page-compact .about-story-copy>p+p{margin-top:13px}
+.about-page-compact .about-promise{padding-top:30px;padding-bottom:30px}
+.about-page-compact .about-promise blockquote{font-size:clamp(24px,2.5vw,34px);line-height:1.35;max-width:830px}
+.about-page-compact .about-promise-note{font-size:15px;line-height:1.55;max-width:760px;margin-top:14px}
+.about-reading-quote{padding-top:24px;padding-bottom:24px;background:#e8f2fa;border-left:5px solid var(--gold)}
+.about-reading-quote blockquote{font-family:Georgia,serif;font-size:clamp(22px,2.2vw,30px);line-height:1.35;margin:0;color:var(--navy)}
+.about-reading-quote>p{font-size:12px;letter-spacing:1px;margin-top:10px;color:var(--muted)}
+.about-page-compact .about-values{padding-top:38px;padding-bottom:38px}
+.about-page-compact .about-values-heading{max-width:850px;margin-bottom:24px}
+.about-page-compact .about-values-heading>p:last-child{font-size:16px;line-height:1.6;margin-top:14px}
+.about-page-compact .about-values-grid{gap:24px 32px}
+.about-page-compact .about-values-grid article{padding-top:16px}
+.about-page-compact .about-values-grid h3{font-size:23px;margin-bottom:9px}
+.about-page-compact .about-values-grid p{font-size:15px;line-height:1.6}
+.about-page-compact .about-contact .button{margin-top:18px}
+@media(max-width:700px){
+ .about-page-compact .about-hero{grid-template-columns:1fr;padding-top:30px;padding-bottom:30px;gap:24px}
+ .about-page-compact .about-family-photo{max-width:210px}
+ .about-page-compact .about-story-section{grid-template-columns:1fr;gap:20px;padding-top:30px;padding-bottom:30px}
+ .about-page-compact .about-story-copy{font-size:16px;line-height:1.65}
+ .about-page-compact .about-values-grid{grid-template-columns:1fr}
+ .about-page-compact .about-values{padding-top:30px;padding-bottom:30px}
+}
