@@ -118,12 +118,75 @@ function Home() {
 }
 
 function AboutJay() {
-  return <main id="main">
+  return <main id="main" className="about-page">
     <section className="hero about-hero section-shell" aria-labelledby="about-title">
-      <div className="hero-copy"><p className="eyebrow">MEET JAY WALLIS</p><h1 id="about-title">Who is<br /><em>Jay For Justice?</em></h1><p className="hero-description">Jay Wallis is the attorney behind Jay For Justice.<br />Your freedom. Your family. Your future.</p><div className="hero-actions"><a className="button" href="tel:+19018087777">Call 901-808-7777 <Arrow /></a><a className="button button-outline" href="sms:+19018087777">Text Jay For Justice <Arrow /></a></div></div>
-      <figure className="attorney-portrait"><img src="/jaywallisheadshot.JPG" alt="Attorney Jay Wallis" width="1638" height="2048" fetchPriority="high" /><figcaption><span>Jay Wallis</span><small>JAY FOR JUSTICE</small></figcaption></figure>
+      <div className="hero-copy">
+        <p className="eyebrow">MEET JAY WALLIS</p>
+        <h1 id="about-title">A lifelong dream.<br /><em>A purpose shaped by life.</em></h1>
+        <p className="hero-description">Father. Business owner. Advocate.<br />Get to know the person behind Jay For Justice.</p>
+        <div className="hero-actions"><a className="button" href="#jay-story">Read Jay’s story <Arrow /></a><a className="button button-outline" href="tel:+19018087777">Call 901-808-7777 <Arrow /></a></div>
+      </div>
+      <figure className="attorney-portrait"><img src="/jaywallisheadshot.JPG" alt="Jay Wallis" width="1638" height="2048" fetchPriority="high" /><figcaption><span>Jay Wallis</span><small>JAY FOR JUSTICE · MEMPHIS, TN</small></figcaption></figure>
     </section>
-    <section className="about-introduction section-shell" aria-labelledby="about-intro-title"><div><p className="eyebrow">THE PERSON BEHIND THE FIRM</p><h2 id="about-intro-title">Jay Wallis.<br /><em>Jay For Justice.</em></h2></div><div><p className="large-copy">Fighting for what matters.</p><p>Jay For Justice brings criminal defense, personal injury, family law, employment law, business litigation, and startup information together in one place. Start with the area that fits your situation, or contact the firm to discuss your next step.</p><a className="about-practice-link" href="/#practice-areas">Explore practice areas <Arrow /></a><p className="legal-note">Contacting the firm does not establish an attorney-client relationship. Avoid sharing confidential details until the firm provides instructions.</p></div></section>
+
+    <section className="about-story-section section-shell" id="jay-story" aria-labelledby="childhood-title">
+      <div><p className="eyebrow">WHERE THE DREAM BEGAN</p><h2 id="childhood-title">Six years old.<br /><em>Looking for a voice.</em></h2></div>
+      <div className="about-story-copy">
+        <p>At six years old, Jay was in foster care. He did not understand why he could not go home to his dad, the man who had raised him as his own and had custody of Jay and his two sisters.</p>
+        <p>He remembers lawyers visiting to learn about his situation and ask what he wanted. He remembers court hearings, the large courtroom, and speaking with the judge. Those encounters sparked a dream: one day, he wanted to become a lawyer.</p>
+        <p>The road to that dream would take him through parenthood, loss, business ownership, and his own experience with the justice system.</p>
+      </div>
+    </section>
+
+    <section className="about-promise section-shell" aria-labelledby="promise-title">
+      <p className="eyebrow" id="promise-title">A LESSON FROM HIS DAD</p>
+      <blockquote><p>“If you tell someone you are going to do something, you do it.”</p></blockquote>
+      <p className="about-promise-note">That advice became a standard Jay carried into his business and now brings to his work with clients: take your commitments seriously and follow through.</p>
+    </section>
+
+    <section className="about-story-section section-shell" aria-labelledby="business-title">
+      <div><p className="eyebrow">RESPONSIBILITY BEFORE THE DREAM</p><h2 id="business-title">Learn the work.<br /><em>Earn the trust.</em></h2></div>
+      <div className="about-story-copy">
+        <p>Jay became a father at eighteen, while he was a senior in high school. A few years later, his dad was diagnosed with lung cancer and died soon afterward. With a son to raise and two sisters still at home, Jay had responsibilities that could not wait.</p>
+        <p>His dad had operated a small locksmith business on his own. Neither of them had envisioned locksmithing as Jay’s career, but Jay took over and learned the work. He spent long days in Georgia junkyards making keys for cars, often squeezed between vehicles in the summer heat. Trade magazines became textbooks; each job became a chance to apply what he had learned.</p>
+        <p>As his skills grew, he taught others and expanded the locksmith and security business across west central Georgia and east Alabama. He studied customer service, developed the company’s marketing, and learned that keeping his word mattered even when it cost him time or money.</p>
+        <p>Building the business taught him to keep working through unfamiliar problems, seek answers, and turn what he learned into practical help.</p>
+      </div>
+    </section>
+
+    <section className="about-story-section about-story-tint section-shell" aria-labelledby="justice-story-title">
+      <div><p className="eyebrow">A PERSONAL TURNING POINT</p><h2 id="justice-story-title">The importance<br /><em>of being heard.</em></h2></div>
+      <div className="about-story-copy">
+        <p>Jay’s childhood dream returned with new urgency when he faced criminal charges for conduct he maintains he did not commit. He recalls meeting with six attorneys who advised him to accept a plea before reviewing the evidence.</p>
+        <p>He ultimately found William Kendrick and Mark Shelnutt, attorneys willing to examine the case and take it to trial. Jay took an eight-month sabbatical from his business, worked alongside them at their firm, and helped research issues in his case. Watching them counsel clients showed him the value of steady guidance and the willingness to acknowledge a question and investigate it.</p>
+        <p>After a trial lasting about a week and a half, a jury found Jay not guilty. The experience reinforced his commitment to becoming a lawyer once his son graduated from high school.</p>
+        <p>He understands how much it matters to have someone listen, study the facts, and help your voice be heard.</p>
+      </div>
+    </section>
+
+    <section className="about-story-section section-shell" aria-labelledby="education-title">
+      <div><p className="eyebrow">RETURNING TO THE DREAM</p><h2 id="education-title">From learning<br /><em>to helping.</em></h2></div>
+      <div className="about-story-copy">
+        <p>Over his years in business, Jay had taken college courses as time allowed. When his son graduated and the COVID pandemic changed daily life, he found in-person classes through Troy University and completed his remaining college coursework in one year.</p>
+        <p>He went on to the University of Memphis Cecil C. Humphreys School of Law. In its tax clinic, he helped people work through their tax filings, explained complicated rules, and helped them address overdue returns.</p>
+        <p>That work confirmed what he enjoyed most: understanding a difficult problem and helping another person understand it, too. His experiences as a defendant, a juror, and a law student working in a prosecutor’s office also gave him different perspectives on the courtroom and the people whose lives are affected there.</p>
+      </div>
+    </section>
+
+    <section className="about-values section-shell" aria-labelledby="justice-title">
+      <div className="about-values-heading"><p className="eyebrow">WHAT JAY FOR JUSTICE STANDS FOR</p><h2 id="justice-title">Justice is<br /><em>for everyone.</em></h2><p>Everyone deserves to be heard and treated fairly. Accountability, fairness, and the opportunity to move forward belong in the same conversation.</p></div>
+      <div className="about-values-grid">
+        <article><h3>Listen before deciding.</h3><p>Understanding starts with your account of what happened, your concerns, and what you hope to achieve. Honest communication helps Jay assess whether he can help and whether you can work well together.</p></article>
+        <article><h3>Study the facts.</h3><p>Jay brings curiosity and persistence to the work. His approach is to examine the evidence, identify the questions that need answers, and research what he needs to understand.</p></article>
+        <article><h3>Give clear counsel.</h3><p>Your options deserve a candid discussion, including their limits. The goal is to develop realistic expectations and a plan that fits your circumstances, whether that involves negotiation or preparing for trial.</p></article>
+        <article><h3>Follow through.</h3><p>Once a plan is agreed upon, Jay’s focus is doing the work it requires. The lesson he learned from his dad remains central: take your word seriously.</p></article>
+      </div>
+    </section>
+
+    <section className="about-story-section about-contact section-shell" aria-labelledby="about-contact-title">
+      <div><p className="eyebrow">START A CONVERSATION</p><h2 id="about-contact-title">Tell Jay<br /><em>what matters to you.</em></h2></div>
+      <div className="about-story-copy"><p>Whether your concern involves your freedom, your family, your recovery, or your business, start by discussing your situation and the next step.</p><div className="holding-actions"><a className="button" href="tel:+19018087777">Call 901-808-7777 <Arrow /></a><a className="button" href="sms:+19018087777">Text Jay For Justice <Arrow /></a></div><a className="about-practice-link" href="/#practice-areas">Explore practice areas <Arrow /></a><p className="legal-note">Contacting the firm does not establish an attorney-client relationship. Avoid sharing confidential details until the firm provides instructions.</p></div>
+    </section>
   </main>
 }
 
