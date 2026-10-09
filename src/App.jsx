@@ -123,82 +123,57 @@ function AboutJay() {
       <div className="hero-copy">
         <p className="eyebrow">MEET JAY WALLIS</p>
         <h1 id="about-title">A lifelong dream.<br /><em>A purpose shaped by life.</em></h1>
-        <p className="hero-description">Father. Business owner. Advocate.<br />Get to know the person behind Jay For Justice.</p>
+        <p className="hero-description">Father. Business owner. Advocate.<br />Helping people through dark days toward brighter tomorrows.</p>
         <div className="hero-actions"><a className="button" href="#jay-story">Read Jay’s story <Arrow /></a><a className="button button-outline" href="tel:+19018087777">Call 901-808-7777 <Arrow /></a></div>
       </div>
       <figure className="attorney-portrait about-family-photo"><img src="/jay-and-jenna.svg" alt="Jay Wallis and Jenna outside a building with a tiger statue" width="259" height="562" fetchPriority="high" /><figcaption><span>Jay &amp; Jenna</span></figcaption></figure>
     </section>
 
     <section className="about-story-section section-shell" id="jay-story" aria-labelledby="childhood-title">
-      <div><p className="eyebrow">WHERE THE DREAM BEGAN</p><h2 id="childhood-title">Six years old.<br /><em>Looking for a voice.</em></h2></div>
+      <div><p className="eyebrow">JAY’S WHY</p><h2 id="childhood-title">A voice.<br /><em>A way forward.</em></h2></div>
       <div className="about-story-copy">
-        <p>At six years old, Jay was in foster care. He did not understand why he could not go home to his dad, the man who had raised him as his own and had custody of Jay and his two sisters.</p>
-        <p>He remembers lawyers visiting to learn about his situation and ask what he wanted. He remembers court hearings, the large courtroom, and speaking with the judge. Those encounters sparked a dream: one day, he wanted to become a lawyer.</p>
-        <p>The road to that dream would take him through parenthood, loss, business ownership, and a renewed commitment to helping people.</p>
+        <p>At six years old, Jay was in foster care, unsure why he could not go home to his dad. Lawyers visited, listened, and asked what he wanted. Those encounters sparked his dream of becoming a lawyer.</p>
+        <p>Life brought responsibilities first. Jay became a father as a high-school senior. When his dad died of lung cancer a few years later, he took over the family’s small locksmith business, with a son to raise and two sisters still at home.</p>
+        <p>He taught himself the work through trade magazines and long days in Georgia junkyards. Over twenty years, he grew the locksmith and security business across west central Georgia and east Alabama. He learned to solve unfamiliar problems, keep learning, and earn trust by following through.</p>
       </div>
     </section>
 
     <section className="about-promise section-shell" aria-labelledby="promise-title">
       <p className="eyebrow" id="promise-title">A LESSON FROM HIS DAD</p>
       <blockquote><p>“If you tell someone you are going to do something, you do it.”</p></blockquote>
-      <p className="about-promise-note">That advice became a standard Jay carried into his business and now brings to his work with clients: take your commitments seriously and follow through.</p>
+      <p className="about-promise-note">A commitment Jay carried into business and brings to his work with clients.</p>
     </section>
-
-    <section className="about-story-section section-shell" aria-labelledby="business-title">
-      <div><p className="eyebrow">RESPONSIBILITY BEFORE THE DREAM</p><h2 id="business-title">Learn the work.<br /><em>Earn the trust.</em></h2></div>
-      <div className="about-story-copy">
-        <p>Jay became a father at eighteen, while he was a senior in high school. A few years later, his dad was diagnosed with lung cancer and died soon afterward. With a son to raise and two sisters still at home, Jay had responsibilities that could not wait.</p>
-        <p>His dad had operated a small locksmith business on his own. Neither of them had envisioned locksmithing as Jay’s career, but Jay took over and learned the work. He spent long days in Georgia junkyards making keys for cars, often squeezed between vehicles in the summer heat. Trade magazines became textbooks; each job became a chance to apply what he had learned.</p>
-        <p>As his skills grew, he taught others and expanded the locksmith and security business across west central Georgia and east Alabama. He studied customer service, developed the company’s marketing, and learned that keeping his word mattered even when it cost him time or money.</p>
-        <p>Building the business taught him to keep working through unfamiliar problems, seek answers, and turn what he learned into practical help.</p>
-      </div>
-    </section>
-
-    <aside className="about-reading-quote section-shell" aria-label="Jay on perseverance"><blockquote>“The barrier that is hardest to cross is what is between our ears.”</blockquote><p>Jay Wallis</p></aside>
 
     <section className="about-story-section about-story-tint section-shell" aria-labelledby="justice-story-title">
-      <div><p className="eyebrow">A CALLING TO HELP</p><h2 id="justice-story-title">The importance<br /><em>of being heard.</em></h2></div>
+      <div><p className="eyebrow">THE DRIVE TO SERVE</p><h2 id="justice-story-title">From a dream<br /><em>to doing the work.</em></h2></div>
       <div className="about-story-copy">
-        <p>Seeing people go unheard—and the pressure to accept plea agreements simply to end prolonged detention—reinforced Jay’s commitment to becoming a lawyer. He wanted to help people navigate life’s difficult challenges, understand their options, and have their voices heard.</p>
-        <p>Working alongside his friends, attorneys Mark Shelnutt and William Kendrick, showed Jay what steady guidance could mean to someone facing a difficult chapter. Seeing how they helped people through dark days toward brighter tomorrows strengthened his determination to return to school and pursue law.</p>
-      </div>
-    </section>
-
-    <section className="about-story-section section-shell" aria-labelledby="education-title">
-      <div><p className="eyebrow">RETURNING TO THE DREAM</p><h2 id="education-title">From learning<br /><em>to helping.</em></h2></div>
-      <div className="about-story-copy">
-        <p>Over his twenty years in business, Jay had taken college courses as time allowed. When his son graduated from high school and became a “Navy Nuke,” Jay was ready to pursue his own lifelong dream. During the COVID pandemic, he found in-person classes through Troy University and completed his remaining college coursework in one year.</p>
-        <p>At the University of Memphis Cecil C. Humphreys School of Law, the most meaningful opportunities were those that allowed him to serve people in the community. Through tax clinics, an externship with the Shelby County District Attorney’s Office, and work in the chambers of a U.S. bankruptcy judge, Jay learned from different perspectives while helping people work through difficult circumstances.</p>
-        <p>After law school, he worked alongside criminal-defense attorney John Dolan, assisting with cases ranging from minor misdemeanors to first-degree premeditated murder. Across those experiences, the purpose remained the same: understand the situation, do the work, and help the person whose life is affected.</p>
-        <p>What Jay enjoys most is helping others—making a complicated problem easier to understand and helping someone find a path forward.</p>
+        <p>Seeing people go unheard—and the pressure to accept plea agreements simply to end prolonged detention—reinforced Jay’s calling. Working alongside his friends, attorneys Mark Shelnutt and William Kendrick, showed him how steady guidance could help people through dark days toward brighter tomorrows.</p>
+        <p>When his son graduated from high school and became a “Navy Nuke,” a nuclear electrical engineer, Jay pursued his own lifelong dream. Building on college courses taken during his years in business, he completed his remaining coursework through Troy University in one year.</p>
+        <p>At the University of Memphis Cecil C. Humphreys School of Law, his most meaningful experiences involved serving others: through tax clinics, the Shelby County District Attorney’s Office, and the chambers of a U.S. bankruptcy judge.</p>
+        <p>After law school, he worked alongside John Dolan, assisting with cases ranging from minor misdemeanors to first-degree premeditated murder. Across those experiences, what Jay enjoyed most was helping people understand difficult problems and find a path forward.</p>
       </div>
     </section>
 
     <aside className="about-reading-quote section-shell" aria-label="Jay on justice"><blockquote>“Justice is for everyone.”</blockquote><p>Jay Wallis</p></aside>
 
     <section className="about-values section-shell" aria-labelledby="justice-title">
-      <div className="about-values-heading"><p className="eyebrow">WHAT JAY FOR JUSTICE STANDS FOR</p><h2 id="justice-title">A voice.<br /><em>A fair chance.</em></h2><p>Everyone deserves to be heard and treated fairly. Accountability, fairness, and the opportunity to move forward belong in the same conversation.</p></div>
+      <div className="about-values-heading"><p className="eyebrow">HOW WE WORK TOGETHER</p><h2 id="justice-title">Your situation.<br /><em>A thoughtful plan.</em></h2><p>Good counsel starts with listening and honest communication. Together, we identify what matters, discuss realistic options, and decide how to move forward.</p></div>
       <div className="about-values-grid">
-        <article><h3>Listen before deciding.</h3><p>Understanding starts with your account of what happened, your concerns, and what you hope to achieve. Honest communication helps Jay assess whether he can help and whether you can work well together.</p></article>
-        <article><h3>Study the facts.</h3><p>Jay brings curiosity and persistence to the work. His approach is to examine the evidence, identify the questions that need answers, and research what he needs to understand.</p></article>
-        <article><h3>Give clear counsel.</h3><p>Your options deserve a candid discussion, including their limits. The goal is to develop realistic expectations and a plan that fits your circumstances, whether that involves negotiation or preparing for trial.</p></article>
-        <article><h3>Follow through.</h3><p>Once a plan is agreed upon, Jay’s focus is doing the work it requires. The lesson he learned from his dad remains central: take your word seriously.</p></article>
+        <article><h3>Be heard.</h3><p>Jay listens to your account, your concerns, and your goals to understand whether he can help.</p></article>
+        <article><h3>Understand your options.</h3><p>He studies the facts and explains the choices, challenges, and limits in plain language.</p></article>
+        <article><h3>Prepare for the next step.</h3><p>The plan should fit your circumstances, whether it involves negotiation or preparing for trial.</p></article>
+        <article><h3>Work together.</h3><p>Honesty, realistic expectations, and follow-through give the work a solid foundation.</p></article>
       </div>
     </section>
 
     <section className="about-story-section about-contact section-shell" aria-labelledby="about-contact-title">
-      <div><p className="eyebrow">START A CONVERSATION</p><h2 id="about-contact-title">Tell Jay<br /><em>what matters to you.</em></h2></div>
-      <div className="about-story-copy"><p>Whether your concern involves your freedom, your family, your recovery, or your business, start by discussing your situation and the next step.</p><div className="holding-actions"><a className="button" href="tel:+19018087777">Call 901-808-7777 <Arrow /></a><a className="button" href="sms:+19018087777">Text Jay For Justice <Arrow /></a></div><a className="about-practice-link" href="/#practice-areas">Explore practice areas <Arrow /></a><p className="legal-note">Contacting the firm does not establish an attorney-client relationship. Avoid sharing confidential details until the firm provides instructions.</p></div>
+      <div><p className="eyebrow">START A CONVERSATION</p><h2 id="about-contact-title">Help during dark days.<br /><em>Hope for brighter tomorrows.</em></h2></div>
+      <div className="about-story-copy"><p>Tell Jay what you are facing and what matters to you. The first step is a conversation about whether and how he can help.</p><div className="holding-actions"><a className="button" href="tel:+19018087777">Call 901-808-7777 <Arrow /></a><a className="button" href="sms:+19018087777">Text Jay For Justice <Arrow /></a></div><p className="legal-note">Contacting the firm does not establish an attorney-client relationship. Avoid sharing confidential details until the firm provides instructions.</p></div>
     </section>
+
     <section className="about-shield section-shell" aria-labelledby="about-shield-title">
       <img src="/jayforjusticeshield.jpg" alt="The gold Jay For Justice shield and sword" width="1280" height="1280" loading="lazy" />
-      <div>
-        <p className="eyebrow">THE MEANING BEHIND OUR SHIELD</p>
-        <h2 id="about-shield-title">Protect what matters.<br /><em>Be ready to act.</em></h2>
-        <p>The shield represents protection: your freedom, your family, your business, and the future you are working toward.</p>
-        <p>The sword represents the resolve to act. That means studying the facts, preparing thoughtfully, and advocating for you when action is needed.</p>
-        <p>Together, they reflect Jay’s approach: protection first, with the preparation and determination to stand up for what matters.</p>
-      </div>
+      <div><p className="eyebrow">THE MEANING BEHIND OUR SHIELD</p><h2 id="about-shield-title">Protect what matters.<br /><em>Be ready to act.</em></h2><p>The shield represents protecting your freedom, family, business, and future. The sword represents the preparation and resolve to act when needed.</p><p>Protection first. Thoughtful action. A commitment to what matters to you.</p></div>
     </section>
   </main>
 }
