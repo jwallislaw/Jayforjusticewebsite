@@ -185,3 +185,13 @@
  .about-page-compact .about-values-grid{grid-template-columns:1fr}
  .about-page-compact .about-values{padding-top:30px;padding-bottom:30px}
 }
+
+/* Closing shield statement on the About page. */
+.about-shield{display:grid;grid-template-columns:minmax(160px,.65fr) minmax(0,1.85fr);align-items:center;gap:6%;padding-top:38px;padding-bottom:38px;background:var(--navy);color:#fff}
+.about-shield>img{width:100%;max-width:230px;height:auto;justify-self:center;border-radius:6px}
+.about-page-compact .about-shield .eyebrow{color:#dec594}
+.about-shield h2{font-size:clamp(30px,2.8vw,39px);line-height:1.15;margin-bottom:18px}
+.about-shield h2 em{color:#dec594}
+.about-shield p:not(.eyebrow){font-size:16px;line-height:1.6;color:#d0d7d9;max-width:760px}
+.about-shield p+p{margin-top:12px}
+@media(max-width:700px){.about-shield{grid-template-columns:1fr;gap:24px;padding-top:30px;padding-bottom:30px}.about-shield>img{max-width:170px}}
