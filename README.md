@@ -1,6 +1,6 @@
 # Jay For Justice website
 
-Website replacement draft in jwallislaw/Jayforjusticewebsite, on codex/chat-10-homepage. React + Vite, prepared for Netlify. The WordPress site remains separate; domain changes require explicit launch authorization.
+Website source in jwallislaw/Jayforjusticewebsite, on codex/chat-10-homepage. React + Vite, prepared for Netlify. Jay connected JayForJustice.com and CallJay.law on October 8, 2026. CallJay.law should retain its address while displaying the same site.
 
 ## Current design
 
@@ -17,7 +17,7 @@ Follow Jay’s supplied reference palette: pale blue #e8f2fa, location blue #0a4
 
 ## Development
 
-Use Node 22. Run `npm ci`, then `npm run dev`. Validate with `npm run build` and `npm run lint`. Netlify builds with `npm run build` and serves `dist`. All pages have separate HTML build entries. Draft robots metadata, robots.txt, and headers block indexing until approved launch.
+Use Node 22. Run `npm ci`, then `npm run dev`. Validate with `npm run build` and `npm run lint`. Netlify builds with `npm run build` and serves `dist`. All pages have separate HTML build entries. Public pages now permit indexing. Canonical URLs and social metadata use https://jayforjustice.com. public/sitemap.xml lists the nine built public pages; client-login retains noindex. See docs/search-indexing-handoff.md for deployment verification and Search Console steps.
 
 ## Before launch
 
