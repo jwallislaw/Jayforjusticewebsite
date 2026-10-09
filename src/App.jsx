@@ -169,7 +169,7 @@ function AboutJay() {
     <section className="about-story-section section-shell" aria-labelledby="education-title">
       <div><p className="eyebrow">RETURNING TO THE DREAM</p><h2 id="education-title">From learning<br /><em>to helping.</em></h2></div>
       <div className="about-story-copy">
-        <p>Over his years in business, Jay had taken college courses as time allowed. When his son graduated and the COVID pandemic changed daily life, he found in-person classes through Troy University and completed his remaining college coursework in one year.</p>
+        <p>Over his twenty years in business, Jay had taken college courses as time allowed. When his son graduated from high school and entered the Navy’s nuclear program, Jay was ready to pursue his own lifelong dream. During the COVID pandemic, he found in-person classes through Troy University and completed his remaining college coursework in one year.</p>
         <p>He went on to the University of Memphis Cecil C. Humphreys School of Law. In its tax clinic, he helped people work through their tax filings, explained complicated rules, and helped them address overdue returns.</p>
         <p>That work confirmed what he enjoyed most: understanding a difficult problem and helping another person understand it, too. His experiences as a defendant, a juror, and a law student working in a prosecutor’s office also gave him different perspectives on the courtroom and the people whose lives are affected there.</p>
       </div>
@@ -190,6 +190,16 @@ function AboutJay() {
     <section className="about-story-section about-contact section-shell" aria-labelledby="about-contact-title">
       <div><p className="eyebrow">START A CONVERSATION</p><h2 id="about-contact-title">Tell Jay<br /><em>what matters to you.</em></h2></div>
       <div className="about-story-copy"><p>Whether your concern involves your freedom, your family, your recovery, or your business, start by discussing your situation and the next step.</p><div className="holding-actions"><a className="button" href="tel:+19018087777">Call 901-808-7777 <Arrow /></a><a className="button" href="sms:+19018087777">Text Jay For Justice <Arrow /></a></div><a className="about-practice-link" href="/#practice-areas">Explore practice areas <Arrow /></a><p className="legal-note">Contacting the firm does not establish an attorney-client relationship. Avoid sharing confidential details until the firm provides instructions.</p></div>
+    </section>
+    <section className="about-shield section-shell" aria-labelledby="about-shield-title">
+      <img src="/jayforjusticeshield.jpg" alt="The gold Jay For Justice shield and sword" width="1280" height="1280" loading="lazy" />
+      <div>
+        <p className="eyebrow">THE MEANING BEHIND OUR SHIELD</p>
+        <h2 id="about-shield-title">Protect what matters.<br /><em>Be ready to act.</em></h2>
+        <p>The shield represents protection: your freedom, your family, your business, and the future you are working toward.</p>
+        <p>The sword represents the resolve to act. That means studying the facts, preparing thoughtfully, and advocating for you when action is needed.</p>
+        <p>Together, they reflect Jay’s approach: protection first, with the preparation and determination to stand up for what matters.</p>
+      </div>
     </section>
   </main>
 }
