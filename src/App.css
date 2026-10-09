@@ -229,3 +229,13 @@
  .about-page-compact .about-shield p:not(.eyebrow){font-size:17px}
  .about-page-compact .about-values-grid article{padding:16px 18px}
 }
+
+/* Personal perspective, matching the navy-and-gold lesson panel. */
+.about-page-compact .about-personal-story{padding-top:36px;padding-bottom:36px}
+.about-page-compact .personal-story-statement{max-width:1000px;margin:0 auto;color:#dec594;font-family:Georgia,serif;font-size:clamp(25px,2.5vw,36px);line-height:1.35}
+.about-page-compact .about-personal-story .about-promise-note{max-width:850px;font-size:18px;line-height:1.5;margin-top:20px}
+@media(max-width:700px){
+ .about-page-compact .about-personal-story{padding-top:30px;padding-bottom:30px}
+ .about-page-compact .personal-story-statement{font-size:25px;line-height:1.35}
+ .about-page-compact .about-personal-story .about-promise-note{font-size:17px}
+}
