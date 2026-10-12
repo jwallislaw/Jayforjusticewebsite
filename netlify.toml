@@ -11,3 +11,16 @@
   [headers.values]
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+# CallJay uses the same homepage with its own server-rendered sharing metadata.
+[[redirects]]
+  from = "https://calljay.law/"
+  to = "/calljay-preview.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://www.calljay.law/"
+  to = "/calljay-preview.html"
+  status = 200
+  force = true
