@@ -7,14 +7,22 @@ export default defineConfig({
   plugins: [
     react(),
     {
-      name: 'criminal-defense-static-content',
+      name: 'practice-area-static-content',
       transformIndexHtml: {
         order: 'post',
         handler(html, context) {
           const filename = context.filename.replaceAll(String.fromCharCode(92), '/')
-          if (!filename.endsWith('/practice-areas/criminal-defense/index.html')) return html
-          const content = readFileSync(new URL('./src/criminal-defense-content.html', import.meta.url), 'utf8')
-          return html.replace('<div id="root"></div>', '<div id="root"><main id="main" class="criminal-defense-page">' + content + '</main></div>')
+          const entries = {
+            'criminal-defense': { source: './src/criminal-defense-content.html', className: 'practice-landing-page criminal-defense-page' },
+            'divorce-family-law': { source: './src/divorce-family-law-content.html', className: 'practice-landing-page' },
+            'personal-injury': { source: './src/personal-injury-content.html', className: 'practice-landing-page' },
+            bankruptcy: { source: './src/bankruptcy-content.html', className: 'practice-landing-page' },
+          }
+          const slug = Object.keys(entries).find(key => filename.endsWith('/practice-areas/' + key + '/index.html'))
+          if (!slug) return html
+          const entry = entries[slug]
+          const content = readFileSync(new URL(entry.source, import.meta.url), 'utf8')
+          return html.replace('<div id="root"></div>', '<div id="root"><main id="main" class="' + entry.className + '">' + content + '</main></div>')
         },
       },
     },
@@ -22,6 +30,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
+        bankruptcy: fileURLToPath(new URL('./practice-areas/bankruptcy/index.html', import.meta.url)),
         'criminal-defense': fileURLToPath(new URL('./practice-areas/criminal-defense/index.html', import.meta.url)),
         'personal-injury': fileURLToPath(new URL('./practice-areas/personal-injury/index.html', import.meta.url)),
         'divorce-family-law': fileURLToPath(new URL('./practice-areas/divorce-family-law/index.html', import.meta.url)),
