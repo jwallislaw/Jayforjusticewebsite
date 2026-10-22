@@ -1,9 +1,24 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import { fileURLToPath } from 'node:url'
+import { readFileSync } from 'node:fs'
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: 'criminal-defense-static-content',
+      transformIndexHtml: {
+        order: 'post',
+        handler(html, context) {
+          const filename = context.filename.replaceAll(String.fromCharCode(92), '/')
+          if (!filename.endsWith('/practice-areas/criminal-defense/index.html')) return html
+          const content = readFileSync(new URL('./src/criminal-defense-content.html', import.meta.url), 'utf8')
+          return html.replace('<div id="root"></div>', '<div id="root"><main id="main" class="criminal-defense-page">' + content + '</main></div>')
+        },
+      },
+    },
+  ],
   build: {
     rollupOptions: {
       input: {
