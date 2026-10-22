@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
+import criminalDefenseContent from './criminal-defense-content.html?raw'
 const services = [
-  ['Criminal Defense', 'Your freedom. Your future.', 'A criminal charge can put everything in question. Start by understanding the charge, the process, and the decisions ahead.'],
+  ['Criminal Defense', 'All felonies. All misdemeanors.', 'Memphis criminal defense for all types of Tennessee felony and misdemeanor charges. Call or text Jay For Justice to discuss your charge, court date, and next step.'],
   ['Personal Injury', 'Your recovery. Your next step.', 'An injury can affect your health, your work, and your daily life. Contact Jay For Justice to discuss your situation and the next step.'],
   ['Family Law', 'What matters at home.', 'Changes to your family call for careful decisions about your children, your finances, and your next chapter.'],
   ['Employment Law', 'Your work. Your livelihood.', 'Workplace concerns can affect your livelihood and your next steps. Contact Jay For Justice to discuss your situation.'],
@@ -80,7 +81,7 @@ export default function App() {
       </div>
       <p className="practice-band firm-priorities">Your Freedom. Your Family. Your Business. Your Future.</p>
     </header>
-    {isTrafficTickets || practiceIndex >= 0 ? <PracticePage index={practiceIndex} isTraffic={isTrafficTickets} /> : isAbout ? <AboutJay /> : isResources ? <Resources /> : isClientLogin ? <ClientLogin /> : <Home />}
+    {practiceIndex === 0 ? <CriminalDefensePage /> : isTrafficTickets || practiceIndex >= 0 ? <PracticePage index={practiceIndex} isTraffic={isTrafficTickets} /> : isAbout ? <AboutJay /> : isResources ? <Resources /> : isClientLogin ? <ClientLogin /> : <Home />}
     <nav className="mobile-contact-bar" aria-label="Quick contact and client access"><a href="tel:+19018087777"><span aria-hidden="true">☎</span>Call</a><a href="sms:+19018087777"><span aria-hidden="true">✉</span>Text</a><a href="/client-login/"><span aria-hidden="true">↗</span>Client Login</a></nav>
     <footer className="site-footer"><div className="footer-top"><a className="wordmark" href="/"><BrandLogo /></a><p>Help During Dark Days.<br />Hope for Bright Tomorrows.</p><div className="footer-links"><a href="/who-is-jay-for-justice/">Who is Jay For Justice</a><a href="tel:+19018087777">Call 901-808-7777</a><a href="sms:+19018087777">Text 901-808-7777</a><a href="#main">Back to top ↑</a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Jay For Justice PLLC<br />Brandon “Jay” Wallis, Attorney at Law</span><span>Design preview · Online intake is being prepared</span></div><p className="photo-credits">Memphis skyline: <a href="https://commons.wikimedia.org/wiki/File:Downtown_Memphis.jpg">Mattbeat1981, Wikimedia Commons</a> · CC0. Temporary photography will be replaced as the design develops.</p></footer>
 
@@ -217,4 +218,9 @@ function PracticePage({ index, isTraffic = false }) {
     <nav className="resource-links" aria-label="Other practice areas">{services.map(([name], i) => i !== index && <a key={name} href={`/practice-areas/${servicePaths[i]}/`}>{name} <Arrow /></a>)}</nav>
     <a className="return-home" href="/#practice-areas">Back to Practice Areas</a>
   </main>
+}
+
+// Trusted, repository-authored content is shared with the static HTML build.
+function CriminalDefensePage() {
+  return <main id="main" className="criminal-defense-page" dangerouslySetInnerHTML={{ __html: criminalDefenseContent }} />
 }
