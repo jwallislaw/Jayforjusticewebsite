@@ -63,9 +63,9 @@
 .intro-link-divider{color:var(--gold)}
 .home-introduction .intro-writing>.button{margin-top:18px}
 .home-introduction .hero-photo{align-self:center}
-.criminal-traffic{margin-top:32px;padding:22px;border-left:3px solid var(--gold);background:#dce9f3}
-.practice-page .criminal-traffic h2{margin-top:0}
-.criminal-traffic p{line-height:1.7;margin-bottom:14px}
+.practice-traffic{margin-top:32px;padding:22px;border-left:3px solid var(--gold);background:#dce9f3}
+.practice-page .practice-traffic h2{margin-top:0}
+.practice-traffic p{line-height:1.7;margin-bottom:14px}
 .traffic-parent{margin-top:24px}
 @media(max-width:700px){.home-introduction .intro-writing{padding:28px 7% 32px}.home-introduction .intro-body{font-size:16px;line-height:1.6;margin-top:20px}.intro-practice-links{font-size:13px}.intro-shield{flex-basis:48px;width:48px;height:60px}.intro-shield img{width:180px;height:60px;left:-4px}.intro-brand-message{gap:11px}}
 
@@ -240,72 +240,78 @@
  .about-page-compact .about-personal-story .about-promise-note{font-size:17px}
 }
 
-/* Criminal-defense landing page: scoped to preserve other practice pages. */
-.criminal-defense-page{color:var(--navy);font-family:'Jost','Avenir Next',Arial,sans-serif}
-.criminal-defense-page p{font-size:18px;line-height:1.55}
-.criminal-defense-page h1{font-family:Georgia,serif;font-size:clamp(36px,4vw,60px);line-height:1.1;letter-spacing:-1px;margin:0 0 20px}
-.criminal-defense-page h2{font-family:Georgia,serif;font-size:clamp(30px,3vw,44px);line-height:1.15;letter-spacing:-.7px}
-.criminal-defense-page h3{font-family:Georgia,serif;font-size:24px;line-height:1.25;margin:0 0 12px}
-.criminal-defense-page h2 em{color:var(--gold)}
-.criminal-defense-page .eyebrow{font-family:Arial,sans-serif;font-size:11px;letter-spacing:1.7px;margin:0 0 15px}
-.criminal-hero{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(240px,.85fr);gap:6%;background:var(--navy);color:#fff;padding-top:44px;padding-bottom:44px}
-.criminal-hero .eyebrow,.criminal-hero h1 em{color:#dec594}
-.criminal-hero p+p{margin-top:14px}
-.criminal-defense-page .criminal-lead{font-size:22px;line-height:1.4;margin-bottom:16px}
-.criminal-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-.criminal-actions .button{margin:0;font-size:16px;line-height:1.35;min-height:48px}
-.criminal-actions .button-outline{border-color:#dec594}
-.criminal-defense-page .criminal-small{font-size:14px;line-height:1.5;margin-top:18px;color:#d9e0ec}
-.criminal-intro-card{align-self:center;border:1px solid #b99a64;padding:24px;background:#ffffff09}
-.criminal-intro-card h2{font-size:29px;letter-spacing:0}
-.criminal-intro-card a{display:inline-flex;min-height:44px;align-items:center;gap:12px;color:#f1d9aa;margin-top:18px;text-underline-offset:4px}
-.criminal-jump-links{display:flex;flex-wrap:wrap;gap:8px 28px;background:#f4ebd8;padding-top:10px;padding-bottom:10px}
-.criminal-jump-links a{display:inline-flex;align-items:center;min-height:44px;text-underline-offset:4px}
-.criminal-section{padding-top:44px;padding-bottom:44px}
-.criminal-section h2{margin-bottom:20px}
-.criminal-section-intro{max-width:900px;margin-bottom:26px}
-.criminal-charge-grid,.criminal-approach-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-.criminal-charge-grid article{border-top:3px solid var(--gold);background:#e8f2fa;padding:22px}
-.criminal-charge-grid p,.criminal-approach-grid p{font-size:17px}
-.criminal-charge-grid a{color:var(--navy);text-underline-offset:3px}
-.criminal-case-stages{border-left:4px solid var(--gold);background:#f4ebd8;padding:22px;margin-top:24px}
-.criminal-approach{background:#e8f2fa}
-.criminal-approach-grid article{padding:20px;background:#ffffffb3}
-.criminal-step{display:block;color:var(--gold);font-size:15px;font-weight:bold;margin-bottom:12px}
-.criminal-principle{background:var(--navy);color:#fff;text-align:center;padding-top:36px;padding-bottom:36px}
-.criminal-principle .eyebrow{color:#dec594}
-.criminal-principle h2{color:#dec594;max-width:950px;margin:0 auto 18px}
-.criminal-principle>p:last-child{max-width:850px;margin:auto}
-.criminal-next-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:28px}
-.criminal-next-grid p+p{margin-top:14px}
-.criminal-next-grid aside{background:#f4ebd8;border-top:3px solid var(--gold);padding:22px}
-.criminal-next-grid .button{font-size:16px;margin-top:20px}
-.criminal-faq{background:#e8f2fa}
-.criminal-faq details{border-top:1px solid #b7c5d5;padding:0;max-width:1000px}
-.criminal-faq details:last-child{border-bottom:1px solid #b7c5d5}
-.criminal-faq summary{cursor:pointer;padding:19px 6px;font-size:19px;font-weight:600;line-height:1.4}
-.criminal-faq details p{padding:0 6px 20px;font-size:17px}
-.criminal-contact{padding-top:40px;padding-bottom:40px;background:var(--navy);color:white}
-.criminal-contact h2{margin-bottom:18px}
-.criminal-contact h2 em,.criminal-contact .eyebrow{color:#dec594}
-.criminal-contact address{font-style:normal;font-size:16px;line-height:1.6;margin-top:26px}
-.criminal-defense-page .criminal-legal-note{font-size:13px;line-height:1.5;max-width:900px;color:#d9e0ec;margin-top:18px}
-.criminal-defense-page [id]{scroll-margin-top:calc(var(--header-height,230px) + 20px)}
+/* Shared practice-area landing pages; existing pages remain scoped. */
+.practice-landing-page{color:var(--navy);font-family:'Jost','Avenir Next',Arial,sans-serif}
+.practice-landing-page p{font-size:18px;line-height:1.55}
+.practice-landing-page h1{font-family:Georgia,serif;font-size:clamp(36px,4vw,60px);line-height:1.1;letter-spacing:-1px;margin:0 0 20px}
+.practice-landing-page h2{font-family:Georgia,serif;font-size:clamp(30px,3vw,44px);line-height:1.15;letter-spacing:-.7px}
+.practice-landing-page h3{font-family:Georgia,serif;font-size:24px;line-height:1.25;margin:0 0 12px}
+.practice-landing-page h2 em{color:var(--gold)}
+.practice-landing-page .eyebrow{font-family:Arial,sans-serif;font-size:11px;letter-spacing:1.7px;margin:0 0 15px}
+.practice-hero{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(240px,.85fr);gap:6%;background:var(--navy);color:#fff;padding-top:44px;padding-bottom:44px}
+.practice-hero .eyebrow,.practice-hero h1 em{color:#dec594}
+.practice-hero p+p{margin-top:14px}
+.practice-landing-page .practice-lead{font-size:22px;line-height:1.4;margin-bottom:16px}
+.practice-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.practice-actions .button{margin:0;font-size:16px;line-height:1.35;min-height:48px}
+.practice-actions .button-outline{border-color:#dec594}
+.practice-landing-page .practice-small{font-size:14px;line-height:1.5;margin-top:18px;color:#d9e0ec}
+.practice-intro-card{align-self:center;border:1px solid #b99a64;padding:24px;background:#ffffff09}
+.practice-intro-card h2{font-size:29px;letter-spacing:0}
+.practice-intro-card a{display:inline-flex;min-height:44px;align-items:center;gap:12px;color:#f1d9aa;margin-top:18px;text-underline-offset:4px}
+.practice-jump-links{display:flex;flex-wrap:wrap;gap:8px 28px;background:#f4ebd8;padding-top:10px;padding-bottom:10px}
+.practice-jump-links a{display:inline-flex;align-items:center;min-height:44px;text-underline-offset:4px}
+.practice-section{padding-top:44px;padding-bottom:44px}
+.practice-landing-page .practice-section{display:block}
+.practice-section h2{margin-bottom:20px}
+.practice-section-intro{max-width:900px;margin-bottom:26px}
+.practice-charge-grid,.practice-approach-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.practice-charge-grid article{border-top:3px solid var(--gold);background:#e8f2fa;padding:22px}
+.practice-charge-grid p,.practice-approach-grid p{font-size:17px}
+.practice-charge-grid a{color:var(--navy);text-underline-offset:3px}
+.practice-case-stages{border-left:4px solid var(--gold);background:#f4ebd8;padding:22px;margin-top:24px}
+.practice-approach{background:#e8f2fa}
+.practice-approach-grid article{padding:20px;background:#ffffffb3}
+.practice-step{display:block;color:var(--gold);font-size:15px;font-weight:bold;margin-bottom:12px}
+.practice-principle{background:var(--navy);color:#fff;text-align:center;padding-top:36px;padding-bottom:36px}
+.practice-principle .eyebrow{color:#dec594}
+.practice-principle h2{color:#dec594;max-width:950px;margin:0 auto 18px}
+.practice-principle>p:last-child{max-width:850px;margin:auto}
+.practice-next-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:28px}
+.practice-next-grid p+p{margin-top:14px}
+.practice-next-grid aside{background:#f4ebd8;border-top:3px solid var(--gold);padding:22px}
+.practice-next-grid .button{font-size:16px;margin-top:20px}
+.practice-faq{background:#e8f2fa}
+.practice-faq details{border-top:1px solid #b7c5d5;padding:0;max-width:1000px}
+.practice-faq details:last-child{border-bottom:1px solid #b7c5d5}
+.practice-faq summary{cursor:pointer;padding:19px 6px;font-size:19px;font-weight:600;line-height:1.4}
+.practice-faq details p{padding:0 6px 20px;font-size:17px}
+.practice-contact{padding-top:40px;padding-bottom:40px;background:var(--navy);color:white}
+.practice-contact h2{margin-bottom:18px}
+.practice-contact h2 em,.practice-contact .eyebrow{color:#dec594}
+.practice-contact address{font-style:normal;font-size:16px;line-height:1.6;margin-top:26px}
+.practice-landing-page .practice-legal-note{font-size:13px;line-height:1.5;max-width:900px;color:#d9e0ec;margin-top:18px}
+.practice-landing-page [id]{scroll-margin-top:calc(var(--header-height,230px) + 20px)}
 @media(max-width:850px){
- .criminal-hero{grid-template-columns:1fr}
- .criminal-intro-card{margin-top:24px}
+ .practice-hero{grid-template-columns:1fr}
+ .practice-intro-card{margin-top:24px}
 }
 @media(max-width:700px){
- .criminal-hero,.criminal-section,.criminal-contact{padding-top:30px;padding-bottom:30px}
- .criminal-charge-grid,.criminal-approach-grid,.criminal-next-grid{grid-template-columns:1fr;gap:16px}
- .criminal-defense-page p{font-size:17px}
- .criminal-defense-page .criminal-lead{font-size:20px}
- .criminal-defense-page h1{font-size:clamp(34px,8.4vw,47px)}
- .criminal-defense-page .eyebrow{font-size:10px}
- .criminal-defense-page [id]{scroll-margin-top:18px}
- .criminal-actions{flex-direction:column;align-items:stretch}
- .criminal-actions .button{justify-content:center;text-align:center}
- .criminal-jump-links{gap:0 18px}
- .criminal-jump-links a{font-size:15px}
- .criminal-charge-grid article{padding:19px}
+ .practice-hero,.practice-section,.practice-contact{padding-top:30px;padding-bottom:30px}
+ .practice-charge-grid,.practice-approach-grid,.practice-next-grid{grid-template-columns:1fr;gap:16px}
+ .practice-landing-page p{font-size:17px}
+ .practice-landing-page .practice-lead{font-size:20px}
+ .practice-landing-page h1{font-size:clamp(34px,8.4vw,47px)}
+ .practice-landing-page .eyebrow{font-size:10px}
+ .practice-landing-page [id]{scroll-margin-top:18px}
+ .practice-actions{flex-direction:column;align-items:stretch}
+ .practice-actions .button{justify-content:center;text-align:center}
+ .practice-jump-links{gap:0 18px}
+ .practice-jump-links a{font-size:15px}
+ .practice-charge-grid article{padding:19px}
 }
+
+/* Prominent bankruptcy advertising disclosure, including shared service listings. */
+.bankruptcy-disclosure{font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.5}
+.site-footer .bankruptcy-disclosure{max-width:1280px;margin:22px auto 0;padding-top:18px;border-top:1px solid #6f718a;color:#fff}
+.practice-contact .bankruptcy-disclosure{margin-top:22px;padding:16px 18px;border-left:4px solid #dec594;background:#ffffff0d;font-size:17px;color:#fff}
