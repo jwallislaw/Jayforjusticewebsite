@@ -20,6 +20,19 @@ export default defineConfig({
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'AW-18530221048');
+      // Contact clicks only: a click does not confirm a connected call or sent text.
+      function gtag_report_conversion() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18530221048/R18LCMDulqYdEPj38oNF'
+        });
+      }
+      document.addEventListener('click', function (event) {
+        if (event.defaultPrevented) return;
+        var link = event.target.closest && event.target.closest('a[href]');
+        if (link && /^(tel:|sms:)/i.test(link.getAttribute('href'))) {
+          gtag_report_conversion();
+        }
+      });
     </script>`)
         },
       },
