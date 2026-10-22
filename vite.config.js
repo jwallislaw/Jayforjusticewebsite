@@ -17,6 +17,7 @@ export default defineConfig({
             'divorce-family-law': { source: './src/divorce-family-law-content.html', className: 'practice-landing-page' },
             'personal-injury': { source: './src/personal-injury-content.html', className: 'practice-landing-page' },
             bankruptcy: { source: './src/bankruptcy-content.html', className: 'practice-landing-page' },
+            'employment-law': { source: './src/employment-law-content.html', className: 'practice-landing-page' },
           }
           const slug = Object.keys(entries).find(key => filename.endsWith('/practice-areas/' + key + '/index.html'))
           if (!slug) return html
