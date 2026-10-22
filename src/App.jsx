@@ -1,14 +1,25 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import criminalDefenseContent from './criminal-defense-content.html?raw'
+import familyLawContent from './divorce-family-law-content.html?raw'
+import personalInjuryContent from './personal-injury-content.html?raw'
+import bankruptcyContent from './bankruptcy-content.html?raw'
+
+const practiceLandingContent = {
+  '/practice-areas/criminal-defense': criminalDefenseContent,
+  '/practice-areas/divorce-family-law': familyLawContent,
+  '/practice-areas/personal-injury': personalInjuryContent,
+  '/practice-areas/bankruptcy': bankruptcyContent,
+}
 const services = [
   ['Criminal Defense', 'All felonies. All misdemeanors.', 'Memphis criminal defense for all types of Tennessee felony and misdemeanor charges. Call or text Jay For Justice to discuss your charge, court date, and next step.'],
-  ['Personal Injury', 'Your recovery. Your next step.', 'An injury can affect your health, your work, and your daily life. Contact Jay For Justice to discuss your situation and the next step.'],
-  ['Family Law', 'What matters at home.', 'Changes to your family call for careful decisions about your children, your finances, and your next chapter.'],
+  ['Personal Injury', 'Your recovery. Your next step.', 'Memphis injury representation for car crashes, falls, and other accidents. Discuss the facts, insurance questions, and your next step with Jay For Justice.'],
+  ['Family Law', 'Your family. Your next chapter.', 'Memphis divorce and family-law help with parenting plans, custody, support, and financial issues. Contact Jay For Justice to discuss your situation.'],
   ['Employment Law', 'Your work. Your livelihood.', 'Workplace concerns can affect your livelihood and your next steps. Contact Jay For Justice to discuss your situation.'],
   ['Business Litigation & Startups', 'Your business. Your next chapter.', 'Business disputes and the decisions involved in starting a business call for a practical plan. Contact Jay For Justice to discuss your situation and the next step.'],
+  ['Bankruptcy', 'Understand your debt-relief options.', 'Discuss Chapter 7 and Chapter 13 bankruptcy options with Jay For Justice in Memphis. Eligibility and the appropriate approach depend on your finances and goals.'],
 ]
-const servicePaths = ['criminal-defense', 'personal-injury', 'divorce-family-law', 'employment-law', 'business-litigation-startups']
+const servicePaths = ['criminal-defense', 'personal-injury', 'divorce-family-law', 'employment-law', 'business-litigation-startups', 'bankruptcy']
 const trafficService = ['Traffic Tickets', 'Small citation. Real consequences.', 'A ticket can raise questions about your license, your driving record, and what to do before your court date.']
 const Arrow = () => <span aria-hidden="true">↗</span>
 function BrandLogo() {
@@ -81,9 +92,9 @@ export default function App() {
       </div>
       <p className="practice-band firm-priorities">Your Freedom. Your Family. Your Business. Your Future.</p>
     </header>
-    {practiceIndex === 0 ? <CriminalDefensePage /> : isTrafficTickets || practiceIndex >= 0 ? <PracticePage index={practiceIndex} isTraffic={isTrafficTickets} /> : isAbout ? <AboutJay /> : isResources ? <Resources /> : isClientLogin ? <ClientLogin /> : <Home />}
+    {practiceLandingContent[pagePath] ? <PracticeLandingPage content={practiceLandingContent[pagePath]} isCriminal={practiceIndex === 0} /> : isTrafficTickets || practiceIndex >= 0 ? <PracticePage index={practiceIndex} isTraffic={isTrafficTickets} /> : isAbout ? <AboutJay /> : isResources ? <Resources /> : isClientLogin ? <ClientLogin /> : <Home />}
     <nav className="mobile-contact-bar" aria-label="Quick contact and client access"><a href="tel:+19018087777"><span aria-hidden="true">☎</span>Call</a><a href="sms:+19018087777"><span aria-hidden="true">✉</span>Text</a><a href="/client-login/"><span aria-hidden="true">↗</span>Client Login</a></nav>
-    <footer className="site-footer"><div className="footer-top"><a className="wordmark" href="/"><BrandLogo /></a><p>Help During Dark Days.<br />Hope for Bright Tomorrows.</p><div className="footer-links"><a href="/who-is-jay-for-justice/">Who is Jay For Justice</a><a href="tel:+19018087777">Call 901-808-7777</a><a href="sms:+19018087777">Text 901-808-7777</a><a href="#main">Back to top ↑</a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Jay For Justice PLLC<br />Brandon “Jay” Wallis, Attorney at Law</span><span>Design preview · Online intake is being prepared</span></div><p className="photo-credits">Memphis skyline: <a href="https://commons.wikimedia.org/wiki/File:Downtown_Memphis.jpg">Mattbeat1981, Wikimedia Commons</a> · CC0. Temporary photography will be replaced as the design develops.</p></footer>
+    <footer className="site-footer"><div className="footer-top"><a className="wordmark" href="/"><BrandLogo /></a><p>Help During Dark Days.<br />Hope for Bright Tomorrows.</p><div className="footer-links"><a href="/who-is-jay-for-justice/">Who is Jay For Justice</a><a href="tel:+19018087777">Call 901-808-7777</a><a href="sms:+19018087777">Text 901-808-7777</a><a href="#main">Back to top ↑</a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Jay For Justice PLLC<br />Brandon “Jay” Wallis, Attorney at Law</span><span>Design preview · Online intake is being prepared</span></div><p className="bankruptcy-disclosure">We are a debt relief agency. We help people file for bankruptcy relief under the Bankruptcy Code.</p><p className="photo-credits">Memphis skyline: <a href="https://commons.wikimedia.org/wiki/File:Downtown_Memphis.jpg">Mattbeat1981, Wikimedia Commons</a> · CC0. Temporary photography will be replaced as the design develops.</p></footer>
 
   </>
 }
@@ -221,6 +232,6 @@ function PracticePage({ index, isTraffic = false }) {
 }
 
 // Trusted, repository-authored content is shared with the static HTML build.
-function CriminalDefensePage() {
-  return <main id="main" className="criminal-defense-page" dangerouslySetInnerHTML={{ __html: criminalDefenseContent }} />
+function PracticeLandingPage({ content, isCriminal }) {
+  return <main id="main" className={isCriminal ? "practice-landing-page criminal-defense-page" : "practice-landing-page"} dangerouslySetInnerHTML={{ __html: content }} />
 }
