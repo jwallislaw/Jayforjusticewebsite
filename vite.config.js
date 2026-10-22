@@ -7,6 +7,24 @@ export default defineConfig({
   plugins: [
     react(),
     {
+      name: 'google-ads-tag',
+      transformIndexHtml: {
+        order: 'post',
+        handler(html) {
+          // Keep the shared Google Ads tag on every HTML entry point.
+          return html.replace('<head>', `<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18530221048"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18530221048');
+    </script>`)
+        },
+      },
+    },
+    {
       name: 'practice-area-static-content',
       transformIndexHtml: {
         order: 'post',
