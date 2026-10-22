@@ -4,18 +4,20 @@ import criminalDefenseContent from './criminal-defense-content.html?raw'
 import familyLawContent from './divorce-family-law-content.html?raw'
 import personalInjuryContent from './personal-injury-content.html?raw'
 import bankruptcyContent from './bankruptcy-content.html?raw'
+import employmentLawContent from './employment-law-content.html?raw'
 
 const practiceLandingContent = {
   '/practice-areas/criminal-defense': criminalDefenseContent,
   '/practice-areas/divorce-family-law': familyLawContent,
   '/practice-areas/personal-injury': personalInjuryContent,
   '/practice-areas/bankruptcy': bankruptcyContent,
+  '/practice-areas/employment-law': employmentLawContent,
 }
 const services = [
   ['Criminal Defense', 'All felonies. All misdemeanors.', 'Memphis criminal defense for all types of Tennessee felony and misdemeanor charges. Call or text Jay For Justice to discuss your charge, court date, and next step.'],
   ['Personal Injury', 'Your recovery. Your next step.', 'Memphis injury representation for car crashes, falls, and other accidents. Discuss the facts, insurance questions, and your next step with Jay For Justice.'],
   ['Family Law', 'Your family. Your next chapter.', 'Memphis divorce and family-law help with parenting plans, custody, support, and financial issues. Contact Jay For Justice to discuss your situation.'],
-  ['Employment Law', 'Your work. Your livelihood.', 'Workplace concerns can affect your livelihood and your next steps. Contact Jay For Justice to discuss your situation.'],
+  ['Employment Law', 'Your work. Your livelihood.', 'Memphis employment-law help for employees facing discrimination, harassment, retaliation, unpaid wages, or termination. Discuss your options with Jay For Justice.'],
   ['Business Litigation & Startups', 'Your business. Your next chapter.', 'Business disputes and the decisions involved in starting a business call for a practical plan. Contact Jay For Justice to discuss your situation and the next step.'],
   ['Bankruptcy', 'Understand your debt-relief options.', 'Discuss Chapter 7 and Chapter 13 bankruptcy options with Jay For Justice in Memphis. Eligibility and the appropriate approach depend on your finances and goals.'],
 ]
