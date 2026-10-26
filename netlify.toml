@@ -24,3 +24,28 @@
   to = "/calljay-preview.html"
   status = 200
   force = true
+
+# Temporarily hidden practice pages; preserve their source for future use.
+[[redirects]]
+  from = "/practice-areas/bankruptcy"
+  to = "/#practice-areas"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/practice-areas/bankruptcy/*"
+  to = "/#practice-areas"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/practice-areas/employment-law"
+  to = "/#practice-areas"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/practice-areas/employment-law/*"
+  to = "/#practice-areas"
+  status = 302
+  force = true
