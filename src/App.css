@@ -314,3 +314,7 @@
 .bankruptcy-disclosure{font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.5}
 .site-footer .bankruptcy-disclosure{max-width:1280px;margin:22px auto 0;padding-top:18px;border-top:1px solid #6f718a;color:#fff}
 .practice-contact .bankruptcy-disclosure{margin-top:22px;padding:16px 18px;border-left:4px solid #dec594;background:#ffffff0d;font-size:17px;color:#fff}
+
+/* Stronger emphasis for the criminal-defense charges heading. */
+.criminal-defense-page #charges-title,
+.criminal-defense-page #charges-title em{font-weight:700}
