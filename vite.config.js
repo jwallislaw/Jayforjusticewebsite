@@ -56,6 +56,20 @@ export default defineConfig({
         },
       },
     },
+    {
+      name: 'clickcease-tag',
+      transformIndexHtml: {
+        order: 'post',
+        handler(html) {
+          // Run last so ClickCease stays at the beginning of head on every page.
+          return html
+            .replace('<head>', `<head>
+    <script async src="https://ob.brilliantchap.com/i/4ea0bdb11ba649f970a42c700b6bf934.js" class="ct_clicktrue"></script>`)
+            .replace('<body>', `<body>
+    <noscript><iframe src="https://ob.brilliantchap.com/ns/4ea0bdb11ba649f970a42c700b6bf934.html?ch=" width="0" height="0" style="display:none"></iframe></noscript>`)
+        },
+      },
+    },
   ],
   build: {
     rollupOptions: {
