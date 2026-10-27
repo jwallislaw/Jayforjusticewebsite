@@ -258,8 +258,14 @@
 .practice-intro-card{align-self:center;border:1px solid #b99a64;padding:24px;background:#ffffff09}
 .practice-intro-card h2{font-size:29px;letter-spacing:0}
 .practice-intro-card a{display:inline-flex;min-height:44px;align-items:center;gap:12px;color:#f1d9aa;margin-top:18px;text-underline-offset:4px}
-.practice-jump-links{display:flex;flex-wrap:wrap;gap:8px 28px;background:#f4ebd8;padding-top:10px;padding-bottom:10px}
-.practice-jump-links a{display:inline-flex;align-items:center;min-height:44px;text-underline-offset:4px}
+.practice-jump-links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;background:var(--cream);padding-top:22px;padding-bottom:22px;border-bottom:1px solid #d2deea}
+.practice-jump-links a{display:flex;align-items:center;gap:12px;min-height:78px;padding:16px;background:#fff;color:var(--navy);border:1px solid #d9d2c5;border-radius:8px;box-shadow:0 2px 5px #1b194407;text-decoration:none;text-align:left;font-size:16px;font-weight:700;line-height:1.35}
+.practice-jump-links a:hover{border-color:var(--gold);background:#fffaf0;box-shadow:0 3px 9px #1b194410}
+.section-link-icon{display:flex;align-items:center;justify-content:center;flex:0 0 36px;width:36px;height:36px;border-radius:50%;background:#f4ebd8}
+.section-link-icon img,.section-link-arrow{display:block;flex-shrink:0}
+.section-link-label{flex:1;min-width:0}
+.section-link-arrow{opacity:.8}
+
 .practice-section{padding-top:44px;padding-bottom:44px}
 .practice-landing-page .practice-section{display:block}
 .practice-section h2{margin-bottom:20px}
@@ -305,7 +311,7 @@
  .practice-landing-page [id]{scroll-margin-top:18px}
  .practice-actions{flex-direction:column;align-items:stretch}
  .practice-actions .button{justify-content:center;text-align:center}
- .practice-jump-links{gap:0 18px}
+ .practice-jump-links{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
  .practice-jump-links a{font-size:15px}
  .practice-charge-grid article{padding:19px}
 }
@@ -315,6 +321,16 @@
 .site-footer .bankruptcy-disclosure{max-width:1280px;margin:22px auto 0;padding-top:18px;border-top:1px solid #6f718a;color:#fff}
 .practice-contact .bankruptcy-disclosure{margin-top:22px;padding:16px 18px;border-left:4px solid #dec594;background:#ffffff0d;font-size:17px;color:#fff}
 
+/* Drug-charge landing page; shares the existing practice-page design. */
+.drug-attorney img{display:block;width:100%;max-width:220px;height:auto;aspect-ratio:1;object-fit:cover;object-position:50% 8%;border-radius:50%;margin:0 auto 24px;border:2px solid #dec594}
+.drug-attorney{text-align:center}
+.practice-landing-page .drug-source-note{font-size:13px;line-height:1.6;margin-top:24px;color:#4c5172}
+.drug-parent-link{display:inline-flex;align-items:center;gap:12px;min-height:44px;margin-top:20px;text-underline-offset:4px}
+/* Illustrative drug-defense markers. The gavel is a local Lucide asset. */
+.drug-step-icon{font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;font-size:32px;font-weight:400;line-height:1.2;margin-bottom:14px;min-height:39px}
+.drug-step-icon img{display:block;width:34px;height:34px}
+@media(max-width:1000px){.practice-jump-links{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:440px){.practice-jump-links{grid-template-columns:1fr;gap:10px}.practice-jump-links a{min-height:64px;padding:12px 14px}}
 /* Stronger emphasis for the criminal-defense charges heading. */
 .criminal-defense-page #charges-title,
 .criminal-defense-page #charges-title em{font-weight:700}

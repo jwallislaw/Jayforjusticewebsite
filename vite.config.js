@@ -44,6 +44,7 @@ export default defineConfig({
         handler(html, context) {
           const filename = context.filename.replaceAll(String.fromCharCode(92), '/')
           const entries = {
+            'criminal-defense/drug-charges': { source: './src/drug-charges-content.html', className: 'practice-landing-page drug-charges-page' },
             'criminal-defense': { source: './src/criminal-defense-content.html', className: 'practice-landing-page criminal-defense-page' },
             'divorce-family-law': { source: './src/divorce-family-law-content.html', className: 'practice-landing-page' },
             'personal-injury': { source: './src/personal-injury-content.html', className: 'practice-landing-page' },
@@ -74,6 +75,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
+        'drug-charges': fileURLToPath(new URL('./practice-areas/criminal-defense/drug-charges/index.html', import.meta.url)),
         'criminal-defense': fileURLToPath(new URL('./practice-areas/criminal-defense/index.html', import.meta.url)),
         'personal-injury': fileURLToPath(new URL('./practice-areas/personal-injury/index.html', import.meta.url)),
         'divorce-family-law': fileURLToPath(new URL('./practice-areas/divorce-family-law/index.html', import.meta.url)),

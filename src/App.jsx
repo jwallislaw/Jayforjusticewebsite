@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import criminalDefenseContent from './criminal-defense-content.html?raw'
+import drugChargesContent from './drug-charges-content.html?raw'
 import familyLawContent from './divorce-family-law-content.html?raw'
 import personalInjuryContent from './personal-injury-content.html?raw'
 
 const practiceLandingContent = {
+  '/practice-areas/criminal-defense/drug-charges': drugChargesContent,
   '/practice-areas/criminal-defense': criminalDefenseContent,
   '/practice-areas/divorce-family-law': familyLawContent,
   '/practice-areas/personal-injury': personalInjuryContent,
