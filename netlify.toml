@@ -1,0 +1,51 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Public marketing pages are crawlable after the approved domain launch.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# CallJay uses the same homepage with its own server-rendered sharing metadata.
+[[redirects]]
+  from = "https://calljay.law/"
+  to = "/calljay-preview.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://www.calljay.law/"
+  to = "/calljay-preview.html"
+  status = 200
+  force = true
+
+# Temporarily hidden practice pages; preserve their source for future use.
+[[redirects]]
+  from = "/practice-areas/bankruptcy"
+  to = "/#practice-areas"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/practice-areas/bankruptcy/*"
+  to = "/#practice-areas"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/practice-areas/employment-law"
+  to = "/#practice-areas"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/practice-areas/employment-law/*"
+  to = "/#practice-areas"
+  status = 302
+  force = true
