@@ -7,6 +7,17 @@ export default defineConfig({
   plugins: [
     react(),
     {
+      name: 'chatgpt-ads-pixel',
+      transformIndexHtml: {
+        order: 'post',
+        handler(html, context) {
+          const filename = context.filename.replaceAll(String.fromCharCode(92), '/')
+          if (filename.endsWith('/client-login/index.html')) return html
+          return html.replace('</head>', '    <script src="/chatgpt-ads.js"></script>\n  </head>')
+        },
+      },
+    },
+    {
       name: 'google-ads-tag',
       transformIndexHtml: {
         order: 'post',
